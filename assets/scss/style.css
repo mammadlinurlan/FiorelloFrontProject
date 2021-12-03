@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: wheat;
+}
+
+.customAnimate {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+
+header nav {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: white;
+}
+
+header nav .nav-left a img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header nav .nav-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+header nav .nav-right .nav-links ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+header nav .nav-right .nav-links ul #shopLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav .nav-right .nav-links ul li:focus .shop-sublinks,
+header nav .nav-right .nav-links ul li:focus-within .shop-sublinks,
+header nav .nav-right .nav-links ul li:hover .shop-sublinks {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition-delay: 0s, 0s, 0.3s;
+          transition-delay: 0s, 0s, 0.3s;
+}
+
+header nav .nav-right .nav-links ul li .shop-sublinks {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-2em);
+          transform: translateY(-2em);
+  -webkit-transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
+  transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
+  z-index: -1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 12%;
+}
+
+header nav .nav-right .nav-links ul li .shop-sublinks ul {
+  display: block;
+  padding-left: 0%;
+  padding-top: 55px;
+  padding-bottom: 20px;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+header nav .nav-right .nav-links ul li .shop-sublinks ul h2 {
+  font-size: 25px;
+}
+
+header nav .nav-right .nav-links ul li .shop-sublinks ul li {
+  margin-top: 15px;
+}
+
+header nav .nav-right .nav-links ul li .shop-sublinks ul li a span {
+  font-size: 11px;
+  line-height: 2.5;
+  opacity: 60%;
+}
+
+header nav .nav-right .nav-links ul li:focus .sublinks,
+header nav .nav-right .nav-links ul li:focus-within .sublinks,
+header nav .nav-right .nav-links ul li:hover .sublinks {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition-delay: 0s, 0s, 0.3s;
+          transition-delay: 0s, 0s, 0.3s;
+}
+
+header nav .nav-right .nav-links ul li .sublinks {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-2em);
+          transform: translateY(-2em);
+  -webkit-transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
+  transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
+  z-index: -1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+header nav .nav-right .nav-links ul li .sublinks ul {
+  display: block;
+  position: absolute;
+  padding-left: 0%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding-top: 55px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 15px;
+  background-color: white;
+}
+
+header nav .nav-right .nav-links ul li .sublinks ul li {
+  width: 180px;
+}
+
+header nav .nav-right .nav-links ul li .sublinks ul li:focus .sub-subLinks,
+header nav .nav-right .nav-links ul li .sublinks ul li:focus-within .sub-subLinks,
+header nav .nav-right .nav-links ul li .sublinks ul li:hover .sub-subLinks {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition-delay: 0s, 0s, 0.3s;
+          transition-delay: 0s, 0s, 0.3s;
+}
+
+header nav .nav-right .nav-links ul li .sublinks ul li .sub-subLinks {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-2em);
+          transform: translateY(-2em);
+  -webkit-transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
+  transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
+  z-index: -1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+header nav .nav-right .nav-links ul li .sublinks ul li .sub-subLinks ul {
+  position: absolute;
+  /* top: -10%; */
+  left: 108%;
+  padding-top: -7px;
+  padding-top: 20px;
+  /* top: 0; */
+  margin-top: -28px;
+  padding-left: 20px;
+}
+
+header nav .nav-right .nav-links ul li .sublinks ul a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav-right .nav-links ul li .sublinks ul a i {
+  font-size: 11px;
+  line-height: 2.5;
+  opacity: 60%;
+  color: black;
+}
+
+header nav .nav-right .nav-links ul li .sublinks ul a span {
+  font-size: 11px;
+  line-height: 2.5;
+  opacity: 60%;
+}
+
+header nav .nav-right .nav-links ul a {
+  text-decoration: none;
+}
+
+header nav .nav-right .nav-links ul a span {
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #1b1b1b;
+}
+
+header nav .search-shopping {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .search-shopping .search-icon {
+  margin-right: 50px;
+}
+
+header nav .search-shopping .search-icon i {
+  font-size: 20px;
+}
+
+header nav .search-shopping .shopping {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .search-shopping .shopping .shop-icon {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 25px;
+}
+
+header nav .search-shopping .shopping .shop-icon .bag-count {
+  width: 14px;
+  height: 14px;
+  background-color: #fc6666;
+  position: absolute;
+  left: 10px;
+  border-radius: 50%;
+  bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .search-shopping .shopping .shop-icon .bag-count p {
+  margin: 0;
+  color: white;
+  font-size: 10px;
+}
+
+header nav .search-shopping .shopping .shop-icon i {
+  font-size: 20px;
+}
+
+header nav .search-shopping .shopping .shop-basket span {
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+header nav .search-shopping .shopping .shop-basket span:nth-child(1) {
+  margin-right: 5px;
+}
+
+header nav .menu-icon {
+  display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+}
+
+header nav .active {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
+}
+
+header nav .menu {
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 4px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #cccccc;
+  padding: 15px 30px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+header nav .menu .myClose {
+  font-size: 20px;
+  text-align: end;
+}
+
+header nav .menu .myClose i {
+  cursor: pointer;
+}
+
+header nav .menu .menu-nav-links {
+  overflow-y: scroll;
+}
+
+header nav .menu .menu-nav-links ul {
+  list-style: none;
+}
+
+header nav .menu .menu-nav-links ul li {
+  margin-left: 20px;
+  line-height: 30px;
+}
+
+header nav .menu .menu-nav-links ul li .sublinks {
+  display: none;
+}
+
+header nav .menu .menu-nav-links ul li .sublinks .subSublinks {
+  display: none;
+}
+
+header nav .menu .menu-nav-links ul li .sublinks ul li {
+  line-height: 20px;
+  margin-left: 0px;
+}
+
+header nav .menu .menu-nav-links ul li .sublinks ul li a {
+  color: black;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+header nav .menu .menu-nav-links ul li .sublinks ul li a i {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+header nav .menu .menu-nav-links ul li .sublinks ul li a span {
+  font-size: 10px;
+}
+
+header nav .menu .menu-nav-links ul li a {
+  color: black;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+header nav .menu .menu-nav-links ul li a i {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+header nav .menu .menu-nav-links ul li a span {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .menu {
+    width: 50%;
+  }
+  header nav .nav-right {
+    display: none;
+  }
+  header nav .menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: green;
+  }
+  header nav .nav-right {
+    display: none;
+  }
+  header nav .menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

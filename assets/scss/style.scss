@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// .container{
+//     max-width: 1350px;
+// }
+body {
+    background-color: wheat;
+}
+
+.customAnimate{
+    transform: rotateZ(90deg);
+}
+
+header {
+    nav {
+        padding-top: 35px;
+        padding-bottom: 35px;
+       background-color: white;
+
+        .nav-left {
+            a {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .nav-right {
+            display: flex;
+            justify-content: end;
+            .nav-links {
+                ul {
+                    #shopLink {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    list-style: none;
+
+                    li {
+                        &:focus .shop-sublinks,
+                        &:focus-within .shop-sublinks,
+                        &:hover .shop-sublinks {
+                            visibility: visible;
+                            opacity: 1;
+                            z-index: 1;
+                            transform: translateY(0%);
+                            transition-delay: 0s, 0s, 0.3s;
+                        }
+                        .shop-sublinks {
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateY(-2em);
+                            transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
+                            z-index: -1;
+                            transition: 0.2s;
+
+                            position: absolute;
+                            // display: block;
+                            display: flex;
+                            top: 12%;
+                            ul {
+                                h2 {
+                                    font-size: 25px;
+                                }
+                                display: block;
+                                padding-left: 0%;
+                                padding-top: 55px;
+                                padding-bottom: 20px;
+                                padding-right: 70px;
+                                padding-left: 70px;
+
+                                li {
+                                    margin-top: 15px;
+                                    a {
+                                        span {
+                                            font-size: 11px;
+                                            line-height: 2.5;
+                                            opacity: 60%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:focus .sublinks,
+                        &:focus-within .sublinks,
+                        &:hover .sublinks {
+                            visibility: visible;
+                            opacity: 1;
+                            z-index: 1;
+                            transform: translateY(0%);
+                            transition-delay: 0s, 0s, 0.3s;
+                        }
+                        .sublinks {
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateY(-2em);
+                            transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
+                            z-index: -1;
+
+                            transition: 0.2s;
+
+                            ul {
+                                display: block;
+
+                                position: absolute;
+                                padding-left: 0%;
+                                height: max-content;
+                                padding-top: 55px;
+                                margin-top: 20px;
+                                padding-bottom: 20px;
+                                padding-right: 15px;
+                                background-color: white;
+                                li {
+                                    width: 180px;
+                                    &:focus .sub-subLinks,
+                                    &:focus-within .sub-subLinks,
+                                    &:hover .sub-subLinks {
+                                        visibility: visible;
+                                        opacity: 1;
+                                        z-index: 1;
+                                        transform: translateY(0%);
+                                        transition-delay: 0s, 0s, 0.3s;
+                                    }
+                                    .sub-subLinks {
+                                        ul {
+                                            position: absolute;
+                                            /* top: -10%; */
+                                            left: 108%;
+                                            padding-top: -7px;
+                                            padding-top: 20px;
+                                            /* top: 0; */
+                                            margin-top: -28px;
+                                            padding-left: 20px;
+                                        }
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transform: translateY(-2em);
+                                        transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s,
+                                            z-index 0s linear 0.01s;
+                                        z-index: -1;
+
+                                        transition: 0.2s;
+                                    }
+                                }
+
+                                a {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    i {
+                                        font-size: 11px;
+                                        line-height: 2.5;
+                                        opacity: 60%;
+                                        color: black;
+                                    }
+                                    span {
+                                        font-size: 11px;
+                                        line-height: 2.5;
+                                        opacity: 60%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        span {
+                            letter-spacing: 2px;
+                            font-size: 13px;
+                            color: #1b1b1b;
+                            // font-family: 'Montserrat', sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+        .search-shopping {
+            align-items: center;
+            justify-content: end;
+            display: flex;
+            .search-icon {
+                margin-right: 50px;
+                i {
+                    font-size: 20px;
+                }
+            }
+            .shopping {
+                display: flex;
+                .shop-icon {
+                    position: relative;
+                    display: flex;
+                    .bag-count {
+                        width: 14px;
+                        height: 14px;
+                        background-color: rgb(252, 102, 102);
+                        position: absolute;
+                        left: 10px;
+                        border-radius: 50%;
+                        bottom: 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p {
+                            margin: 0;
+                            color: white;
+                            font-size: 10px;
+                        }
+                    }
+                    margin-right: 25px;
+                    i {
+                        font-size: 20px;
+                    }
+                }
+                .shop-basket {
+                    span {
+                        letter-spacing: 2px;
+                        font-size: 13px;
+                        &:nth-child(1) {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .menu-icon {
+            display: none;
+            justify-content: flex-end;
+            cursor: pointer;
+        }
+        .active {
+            transform: translateX(0%) !important;
+        }
+        .menu {
+            transition: .3s;
+            border-radius: 4px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            background-color: rgb(204, 204, 204);
+           
+            padding: 15px 30px;
+            transform: translateX(100%);
+            // display: none;
+            .myClose {
+                font-size: 20px;
+                text-align: end;
+                i {
+                    cursor: pointer;
+                }
+            }
+            .menu-nav-links {
+                overflow-y: scroll;
+                ul {
+                    list-style: none;
+
+                    li {
+                        margin-left: 20px;
+                        
+                        // text-align: center;
+                        line-height: 30px;
+                        .sublinks{
+                            display: none;
+                            .subSublinks{
+                                display: none;
+                            }
+                           ul{
+                               li{
+                                line-height: 20px;
+                                margin-left: 0px;
+                                a {color: black;
+                                    letter-spacing: 1px;
+                                    i{
+                                        font-size: 10px;
+                                        margin-left: 4px;
+                                    }
+                                    text-decoration: none;
+                                    span{
+                                        font-size: 10px;
+                                    }
+                                }
+                               }
+                           }
+                           
+                        }
+                        a {color: black;
+                            letter-spacing: 2px;
+                            i{
+                                transition: 0.2s;
+                                font-size: 10px;
+                                margin-left: 4px;
+                            }
+                            text-decoration: none;
+                            span{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+}
+
+
+
+@media screen and(max-width:992px){
+
+    .menu{
+        width: 50%;
+    }
+
+
+    header{
+        nav{
+            .nav-right{
+                display: none;
+            }
+        }
+    }
+
+    header {
+        nav {
+            .menu-icon {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+  
+
+}
+
+@media screen and(max-width:768px){
+    body{
+        background-color: green;
+    }
+   
+    header{
+        nav{
+            .nav-right{
+                display: none;
+            }
+        }
+    }
+
+    header {
+        nav {
+            .menu-icon {
+                display: flex;
+                align-items: center;
+            }
+        }
+       
+    }
+
+    .menu{
+        width: 100%;
+    }
+   
+
+}
+    

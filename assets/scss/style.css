@@ -5,8 +5,8 @@
           box-sizing: border-box;
 }
 
-body {
-  background-color: wheat;
+.unactiveProd {
+  display: none !important;
 }
 
 .customAnimate {
@@ -35,193 +35,262 @@ header nav .nav-right {
 }
 
 header nav .nav-right .nav-links ul {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   list-style: none;
 }
 
-header nav .nav-right .nav-links ul #shopLink {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+header nav .nav-right .nav-links ul li {
+  width: 200px;
+  margin-left: 30px;
 }
 
-header nav .nav-right .nav-links ul li:focus .shop-sublinks,
-header nav .nav-right .nav-links ul li:focus-within .shop-sublinks,
-header nav .nav-right .nav-links ul li:hover .shop-sublinks {
+header nav .nav-right .nav-links ul li a span {
+  font-size: 12px;
+}
+
+header nav .nav-right .nav-links ul li:hover .home {
   visibility: visible;
-  opacity: 1;
-  z-index: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  -webkit-transition-delay: 0s, 0s, 0.3s;
-          transition-delay: 0s, 0s, 0.3s;
+  height: 50%;
 }
 
-header nav .nav-right .nav-links ul li .shop-sublinks {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(-2em);
-          transform: translateY(-2em);
-  -webkit-transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
-  transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
-  z-index: -1;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 12%;
-}
-
-header nav .nav-right .nav-links ul li .shop-sublinks ul {
-  display: block;
-  padding-left: 0%;
-  padding-top: 55px;
-  padding-bottom: 20px;
-  padding-right: 70px;
-  padding-left: 70px;
-}
-
-header nav .nav-right .nav-links ul li .shop-sublinks ul h2 {
-  font-size: 25px;
-}
-
-header nav .nav-right .nav-links ul li .shop-sublinks ul li {
-  margin-top: 15px;
-}
-
-header nav .nav-right .nav-links ul li .shop-sublinks ul li a span {
-  font-size: 11px;
-  line-height: 2.5;
-  opacity: 60%;
-}
-
-header nav .nav-right .nav-links ul li:focus .sublinks,
-header nav .nav-right .nav-links ul li:focus-within .sublinks,
-header nav .nav-right .nav-links ul li:hover .sublinks {
+header nav .nav-right .nav-links ul li:hover .pages {
   visibility: visible;
-  opacity: 1;
-  z-index: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  -webkit-transition-delay: 0s, 0s, 0.3s;
-          transition-delay: 0s, 0s, 0.3s;
+  height: 25%;
 }
 
-header nav .nav-right .nav-links ul li .sublinks {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(-2em);
-          transform: translateY(-2em);
-  -webkit-transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
-  transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
-  z-index: -1;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+header nav .nav-right .nav-links ul li:hover .portfolio {
+  visibility: visible;
+  height: 40%;
 }
 
-header nav .nav-right .nav-links ul li .sublinks ul {
+header nav .nav-right .nav-links ul li:hover .blog {
+  visibility: visible;
+  height: 30%;
+}
+
+header nav .nav-right .nav-links ul li:hover .elements {
+  visibility: visible;
+  height: 30%;
+}
+
+header nav .nav-right .nav-links ul li:hover .shopcards {
+  visibility: visible;
+  height: 89vh;
+}
+
+header nav .nav-right .nav-links ul li:hover .portfoliolayouts {
+  visibility: visible;
+  height: 20%;
+}
+
+header nav .nav-right .nav-links ul li .elements .typographyli:hover .typography {
+  opacity: 100%;
+}
+
+header nav .nav-right .nav-links ul li .elements .classicli:hover .classic {
+  opacity: 100%;
+}
+
+header nav .nav-right .nav-links ul li .elements .infographicli:hover .infographic {
+  opacity: 100%;
+}
+
+header nav .nav-right .nav-links ul li .elements .interactiveli:hover .interactive {
+  opacity: 100%;
+}
+
+header nav .nav-right .nav-links ul li .elements li {
+  margin-bottom: 25px;
+}
+
+header nav .nav-right .nav-links ul li .elements li ul {
   display: block;
-  position: absolute;
-  padding-left: 0%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  padding-top: 55px;
-  margin-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 15px;
   background-color: white;
+  position: absolute;
+  right: 170px;
+  padding-left: 0%;
 }
 
-header nav .nav-right .nav-links ul li .sublinks ul li {
-  width: 180px;
-}
-
-header nav .nav-right .nav-links ul li .sublinks ul li:focus .sub-subLinks,
-header nav .nav-right .nav-links ul li .sublinks ul li:focus-within .sub-subLinks,
-header nav .nav-right .nav-links ul li .sublinks ul li:hover .sub-subLinks {
-  visibility: visible;
-  opacity: 1;
-  z-index: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  -webkit-transition-delay: 0s, 0s, 0.3s;
-          transition-delay: 0s, 0s, 0.3s;
-}
-
-header nav .nav-right .nav-links ul li .sublinks ul li .sub-subLinks {
+header nav .nav-right .nav-links ul li .elements li .classic {
+  top: 60px;
   opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(-2em);
-          transform: translateY(-2em);
-  -webkit-transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
-  transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
-  z-index: -1;
+}
+
+header nav .nav-right .nav-links ul li .elements li .classic:hover {
+  opacity: 100%;
+}
+
+header nav .nav-right .nav-links ul li .elements li .infographic {
+  top: 70px;
+  opacity: 0;
+}
+
+header nav .nav-right .nav-links ul li .elements li .infographic:hover {
+  opacity: 100%;
+}
+
+header nav .nav-right .nav-links ul li .elements li .interactive {
+  top: 80px;
+  opacity: 0;
+}
+
+header nav .nav-right .nav-links ul li .elements li .interactive:hover {
+  opacity: 100%;
+}
+
+header nav .nav-right .nav-links ul li .elements li .typography {
+  top: 90px;
+  opacity: 0;
+}
+
+header nav .nav-right .nav-links ul li .elements li .typography:hover {
+  opacity: 100%;
+}
+
+header nav .nav-right .nav-links ul li .elements i {
+  margin-right: 40px;
+}
+
+header nav .nav-right .nav-links ul li .portfolio #prtflsingle:hover .portfoliosingle {
+  visibility: visible;
+  height: 80%;
+}
+
+header nav .nav-right .nav-links ul li .portfolio #prtflayout:hover .portfoliolayouts {
+  visibility: visible;
+  height: 80%;
+}
+
+header nav .nav-right .nav-links ul li .home,
+header nav .nav-right .nav-links ul li .pages,
+header nav .nav-right .nav-links ul li .portfolio,
+header nav .nav-right .nav-links ul li .blog,
+header nav .nav-right .nav-links ul li .elements {
+  position: relative;
+  z-index: 50;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-
-header nav .nav-right .nav-links ul li .sublinks ul li .sub-subLinks ul {
+  width: 200px;
+  background-color: white;
   position: absolute;
-  /* top: -10%; */
-  left: 108%;
-  padding-top: -7px;
-  padding-top: 20px;
-  /* top: 0; */
-  margin-top: -28px;
-  padding-left: 20px;
+  padding-top: 40px;
+  padding-left: 0px;
+  top: 95px;
+  display: block;
+  visibility: hidden;
+  height: 0%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-header nav .nav-right .nav-links ul li .sublinks ul a {
+header nav .nav-right .nav-links ul li .home li,
+header nav .nav-right .nav-links ul li .pages li,
+header nav .nav-right .nav-links ul li .portfolio li,
+header nav .nav-right .nav-links ul li .blog li,
+header nav .nav-right .nav-links ul li .elements li {
+  margin-bottom: 25px;
+}
+
+header nav .nav-right .nav-links ul li .home .portfoliolayouts,
+header nav .nav-right .nav-links ul li .pages .portfoliolayouts,
+header nav .nav-right .nav-links ul li .portfolio .portfoliolayouts,
+header nav .nav-right .nav-links ul li .blog .portfoliolayouts,
+header nav .nav-right .nav-links ul li .elements .portfoliolayouts {
+  display: block;
+  background-color: white;
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  padding-left: 0;
+  visibility: hidden;
+  height: 0%;
+}
+
+header nav .nav-right .nav-links ul li .home .portfoliosingle,
+header nav .nav-right .nav-links ul li .pages .portfoliosingle,
+header nav .nav-right .nav-links ul li .portfolio .portfoliosingle,
+header nav .nav-right .nav-links ul li .blog .portfoliosingle,
+header nav .nav-right .nav-links ul li .elements .portfoliosingle {
+  display: block;
+  visibility: hidden;
+  height: 0%;
+  background-color: white;
+  position: absolute;
+  top: 140px;
+  left: 200px;
+  padding-left: 0;
+}
+
+header nav .nav-right .nav-links ul li .home {
+  width: 220px;
+}
+
+header nav .nav-right .nav-links ul li .blog {
+  padding-left: 30px;
+}
+
+header nav .nav-right .nav-links ul li .blog .post:hover .bloginlinks {
+  opacity: 100%;
+}
+
+header nav .nav-right .nav-links ul li .blog .post .bloginlinks {
+  display: block;
+  position: absolute;
+  left: 200px;
+  top: 104px;
+  background-color: white;
+  padding-left: 0%;
+  padding-right: 0%;
+  opacity: 0;
+}
+
+header nav .nav-right .nav-links ul li .shopcards {
+  position: relative;
+  z-index: 50;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  left: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: white;
+  position: absolute;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  top: 95px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  visibility: hidden;
+  height: 0%;
 }
 
-header nav .nav-right .nav-links ul li .sublinks ul a i {
-  font-size: 11px;
-  line-height: 2.5;
-  opacity: 60%;
-  color: black;
+header nav .nav-right .nav-links ul li .shopcards ul {
+  display: block;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-header nav .nav-right .nav-links ul li .sublinks ul a span {
-  font-size: 11px;
-  line-height: 2.5;
-  opacity: 60%;
+header nav .nav-right .nav-links ul li .shopcards ul li {
+  margin-bottom: 25px;
 }
 
-header nav .nav-right .nav-links ul a {
+header nav .nav-right .nav-links a {
   text-decoration: none;
 }
 
-header nav .nav-right .nav-links ul a span {
+header nav .nav-right .nav-links a span {
   letter-spacing: 2px;
   font-size: 13px;
   color: #1b1b1b;
 }
 
-header nav .search-shopping {
+header .search-shopping {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -233,21 +302,21 @@ header nav .search-shopping {
   display: flex;
 }
 
-header nav .search-shopping .search-icon {
+header .search-shopping .search-icon {
   margin-right: 50px;
 }
 
-header nav .search-shopping .search-icon i {
+header .search-shopping .search-icon i {
   font-size: 20px;
 }
 
-header nav .search-shopping .shopping {
+header .search-shopping .shopping {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header nav .search-shopping .shopping .shop-icon {
+header .search-shopping .shopping .shop-icon {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,7 +324,7 @@ header nav .search-shopping .shopping .shop-icon {
   margin-right: 25px;
 }
 
-header nav .search-shopping .shopping .shop-icon .bag-count {
+header .search-shopping .shopping .shop-icon .bag-count {
   width: 14px;
   height: 14px;
   background-color: #fc6666;
@@ -274,26 +343,26 @@ header nav .search-shopping .shopping .shop-icon .bag-count {
           align-items: center;
 }
 
-header nav .search-shopping .shopping .shop-icon .bag-count p {
+header .search-shopping .shopping .shop-icon .bag-count p {
   margin: 0;
   color: white;
   font-size: 10px;
 }
 
-header nav .search-shopping .shopping .shop-icon i {
+header .search-shopping .shopping .shop-icon i {
   font-size: 20px;
 }
 
-header nav .search-shopping .shopping .shop-basket span {
+header .search-shopping .shopping .shop-basket span {
   letter-spacing: 2px;
   font-size: 13px;
 }
 
-header nav .search-shopping .shopping .shop-basket span:nth-child(1) {
+header .search-shopping .shopping .shop-basket span:nth-child(1) {
   margin-right: 5px;
 }
 
-header nav .menu-icon {
+header .menu-icon {
   display: none;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -301,100 +370,350 @@ header nav .menu-icon {
   cursor: pointer;
 }
 
-header nav .active {
+header .active {
   -webkit-transform: translateX(0%) !important;
           transform: translateX(0%) !important;
 }
 
-header nav .menu {
-  -webkit-transition: .3s;
-  transition: .3s;
+header .menu {
+  z-index: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border-radius: 4px;
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
-  background-color: #cccccc;
+  background-color: #f3f3f3;
   padding: 15px 30px;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
 
-header nav .menu .myClose {
+header .menu .myClose {
   font-size: 20px;
-  text-align: end;
+  text-align: start;
 }
 
-header nav .menu .myClose i {
+header .menu .myClose i {
   cursor: pointer;
 }
 
-header nav .menu .menu-nav-links {
+header .menu .menu-nav-links {
   overflow-y: scroll;
 }
 
-header nav .menu .menu-nav-links ul {
+header .menu .menu-nav-links ul {
   list-style: none;
 }
 
-header nav .menu .menu-nav-links ul li {
+header .menu .menu-nav-links ul li {
   margin-left: 20px;
+  line-height: 50px;
+}
+
+header .menu .menu-nav-links ul li .sublinks {
+  display: none;
+}
+
+header .menu .menu-nav-links ul li .sublinks .subSublinks {
+  display: none;
+}
+
+header .menu .menu-nav-links ul li .sublinks ul li {
   line-height: 30px;
-}
-
-header nav .menu .menu-nav-links ul li .sublinks {
-  display: none;
-}
-
-header nav .menu .menu-nav-links ul li .sublinks .subSublinks {
-  display: none;
-}
-
-header nav .menu .menu-nav-links ul li .sublinks ul li {
-  line-height: 20px;
   margin-left: 0px;
 }
 
-header nav .menu .menu-nav-links ul li .sublinks ul li a {
+header .menu .menu-nav-links ul li .sublinks ul li a {
   color: black;
   letter-spacing: 1px;
   text-decoration: none;
 }
 
-header nav .menu .menu-nav-links ul li .sublinks ul li a i {
+header .menu .menu-nav-links ul li .sublinks ul li a i {
   font-size: 10px;
   margin-left: 4px;
 }
 
-header nav .menu .menu-nav-links ul li .sublinks ul li a span {
+header .menu .menu-nav-links ul li .sublinks ul li a span {
   font-size: 10px;
 }
 
-header nav .menu .menu-nav-links ul li a {
+header .menu .menu-nav-links ul li a {
   color: black;
   letter-spacing: 2px;
   text-decoration: none;
 }
 
-header nav .menu .menu-nav-links ul li a i {
+header .menu .menu-nav-links ul li a i {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   font-size: 10px;
   margin-left: 4px;
 }
 
-header nav .menu .menu-nav-links ul li a span {
+header .menu .menu-nav-links ul li a span {
   font-size: 10px;
 }
 
+main #introduce {
+  position: relative;
+}
+
+main #introduce .flowersInfo {
+  opacity: 0;
+  -webkit-transition: 5.5s;
+  transition: 5.5s;
+  width: 380px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translate(5%, -50%);
+          transform: translate(5%, -50%);
+}
+
+main #introduce .flowersInfo .title {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main #introduce .flowersInfo .title .st {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #introduce .flowersInfo .title span {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  margin-left: 10px;
+  font-weight: lighter;
+  line-height: 1;
+}
+
+main #introduce .flowersInfo .title span:nth-child(2) {
+  color: red;
+}
+
+main #introduce .flowersInfo .desc {
+  margin-top: 25px;
+}
+
+main #introduce .flowersInfo .desc p {
+  opacity: 60%;
+  padding-left: 10px;
+  font-family: "Lora", serif;
+}
+
+main #introduce .flowersInfo .sign {
+  padding-left: 10px;
+  margin-top: 25px;
+}
+
+main #introduce .images {
+  overflow: hidden;
+}
+
+main #introduce .images .clickright {
+  position: absolute;
+  -webkit-transform: translate(1%, -50%);
+          transform: translate(1%, -50%);
+  font-size: 45px;
+  top: 50%;
+  right: 1%;
+  color: #c2c2c2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  cursor: pointer;
+}
+
+main #introduce .images .clickright:hover {
+  color: black;
+  font-size: 55px;
+}
+
+main #introduce .images .clickleft {
+  cursor: pointer;
+  position: absolute;
+  -webkit-transform: translate(1%, -50%);
+          transform: translate(1%, -50%);
+  font-size: 45px;
+  top: 50%;
+  left: 1%;
+  color: #c2c2c2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+main #introduce .images .clickleft:hover {
+  color: black;
+  font-size: 55px;
+}
+
+main #introduce .images img {
+  opacity: 0;
+  position: relative;
+  z-index: -2;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  width: 100%;
+  height: 477px;
+}
+
+main #products {
+  padding-bottom: 8%;
+  margin-top: 5%;
+}
+
+main #products .filters-filterbtn .filters span {
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+main #products .filters-filterbtn .filters span:hover {
+  color: red;
+}
+
+main #products .filters-filterbtn .filterbtn:hover {
+  color: red;
+}
+
+main #products .filters-filterbtn .filterbtn span {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+main #products .filters-filterbtn .filterbtn span:nth-child(1) {
+  margin-right: 5%;
+}
+
+main #products .product {
+  position: relative;
+  margin-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #products .product .productImage {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+main #products .product .productImage img {
+  width: 100%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+main #products .product .productImage img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main #products .product .productTitle {
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+main #products .product .productTitle p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+main #products .product .productPrice {
+  cursor: pointer;
+}
+
+main #products .product .productPrice span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 50%;
+}
+
+main #products .product .productPrice span:nth-child(1) {
+  line-height: 1.7;
+  font-size: 15px;
+  position: absolute;
+  -webkit-transform: translateX(-120px);
+          transform: translateX(-120px);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+main #products .product:hover span {
+  opacity: 0%;
+}
+
+main #products .product:hover span:nth-child(1) {
+  opacity: 60%;
+  line-height: 1.7;
+  font-size: 15px;
+  position: absolute;
+  -webkit-transform: translateX(-35px);
+          transform: translateX(-35px);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main #products .product:nth-child(6):hover span {
+  opacity: 0%;
+}
+
+main #products .product:nth-child(6):hover span:nth-child(1) {
+  opacity: 60%;
+  line-height: 1.7;
+  font-size: 15px;
+  position: absolute;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main #products .product span:nth-child(1):hover {
+  color: red;
+}
+
 @media screen and (max-width: 992px) {
-  .menu {
+  main .menu {
     width: 50%;
   }
-  header nav .nav-right {
+  main header nav .nav-right {
     display: none;
   }
-  header nav .menu-icon {
+  main header nav .menu-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -404,14 +723,40 @@ header nav .menu .menu-nav-links ul li a span {
   }
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    background-color: green;
-  }
-  header nav .nav-right {
+@media screen and (max-width: 767px) {
+  main main #introduce .flowersInfo .desc {
     display: none;
   }
-  header nav .menu-icon {
+  main main #introduce .flowersInfo {
+    width: 380px;
+    position: absolute;
+    top: 25%;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    left: -10%;
+  }
+  main main #introduce .flowersInfo {
+    width: 380px;
+    position: absolute;
+    top: 25%;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    left: -10%;
+  }
+  main main #introduce .images img {
+    height: 420px;
+  }
+  main .container {
+    width: 85% !important;
+  }
+  main header nav .nav-right {
+    display: none;
+  }
+  main header nav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  main header nav .menu-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -419,7 +764,7 @@ header nav .menu .menu-nav-links ul li a span {
         -ms-flex-align: center;
             align-items: center;
   }
-  .menu {
+  main .menu {
     width: 100%;
   }
 }

@@ -10,8 +10,12 @@
 body {
 }
 
-.unactiveProd{
+.unactiveProd {
     display: none !important;
+}
+
+.activeFilter {
+    color: red !important;
 }
 
 .customAnimate {
@@ -494,6 +498,17 @@ main {
         padding-bottom: 8%;
         margin-top: 5%;
         .filters-filterbtn {
+            .mdfilters {
+                .mdcategories {
+                    display: none;
+                    span {
+                        cursor: pointer;
+                        font-size: 12px;
+                        letter-spacing: 2px;
+                        transition: 0.2s;
+                    }
+                }
+            }
             .filters {
                 span {
                     &:hover {
@@ -506,6 +521,110 @@ main {
                 }
             }
             .filterbtn {
+                &:hover {
+                    .filterLists {
+                        display: flex;
+                    }
+                }
+                .filterLists {
+                    display: none;
+                    padding-top: 25px;
+
+                    position: absolute;
+                    width: 400px;
+                    height: 250px;
+                    background-color: white;
+                    top: 100%;
+                    z-index: 1;
+                    .sortby {
+                        height: max-content;
+                        h4 {
+                            padding-left: 2rem;
+                            font-size: 25px;
+                            font-family: "Fuzzy Bubbles", cursive;
+                        }
+                        ul {
+                            list-style: none;
+                            li {
+                                a {
+                                    letter-spacing: 1px;
+                                    font-size: 14px;
+                                    color: black;
+                                    text-decoration: none;
+                                }
+
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    .pricerange {
+                        height: max-content;
+                        h4 {
+                            padding-left: 2rem;
+                            font-size: 25px;
+                            font-family: "Fuzzy Bubbles", cursive;
+                        }
+                        ul {
+                            list-style: none;
+                            li {
+                                margin-top: 5px;
+                                a {
+                                    color: black;
+                                    letter-spacing: 1px;
+                                    font-size: 14px;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .mdfilterLists {
+                    text-align: start;
+                    display: none;
+                    .sortby {
+                        height: max-content;
+                        h4 {
+                            font-size: 25px;
+                            font-family: "Fuzzy Bubbles", cursive;
+                        }
+                        ul {
+                            padding-left: 0%;
+                            list-style: none;
+                            li {
+                                a {
+                                    letter-spacing: 1px;
+                                    font-size: 14px;
+                                    color: black;
+                                    text-decoration: none;
+                                }
+
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    .pricerange {
+                        height: max-content;
+                        h4 {
+                            font-size: 25px;
+                            font-family: "Fuzzy Bubbles", cursive;
+                        }
+                        ul {
+                            padding-left: 0%;
+                            list-style: none;
+                            li {
+                                margin-top: 5px;
+                                padding-left: 0%;
+                                a {
+                                    color: black;
+                                    letter-spacing: 1px;
+                                    font-size: 14px;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                position: relative;
                 &:hover {
                     color: red;
                 }
@@ -526,7 +645,7 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
-            
+
             .productImage {
                 overflow: hidden;
                 cursor: pointer;
@@ -557,7 +676,6 @@ main {
 
                     // transform: translateX(-100px);
                     &:nth-child(1) {
-                        
                         line-height: 1.7;
                         font-size: 15px;
                         position: absolute;
@@ -570,15 +688,10 @@ main {
                 }
             }
 
-            
-
-            
             &:hover {
                 span {
-
                     opacity: 0%;
                     &:nth-child(1) {
-                       
                         opacity: 60%;
                         line-height: 1.7;
                         font-size: 15px;
@@ -586,11 +699,10 @@ main {
                         transform: translateX(-35px);
                         width: max-content;
                     }
-
                 }
             }
 
-            &:nth-child(6){
+            &:nth-child(6) {
                 &:hover {
                     span {
                         opacity: 0%;
@@ -602,54 +714,328 @@ main {
                             transform: translateX(-15px);
                             width: max-content;
                         }
-    
                     }
                 }
             }
 
-            
-                span {
-
-                   
-                    &:nth-child(1) {
-                       
-                        &:hover{
-                            color: red;
-                        }
+            span {
+                &:nth-child(1) {
+                    &:hover {
+                        color: red;
                     }
-
                 }
-            
-
-
-        }
-    }
-
-
-@media screen and(max-width:992px) {
-    .menu {
-        width: 50%;
-    }
-
-    header {
-        nav {
-            .nav-right {
-                display: none;
             }
         }
     }
 
-    header {
-        nav {
-            .menu-icon {
+    #valentine {
+        background-color: #f7f7f7;
+        padding: 8% 0;
+        .valentineVideo {
+            overflow: hidden;
+            position: relative;
+            .videoImage {
+                img:hover {
+                    transform: scale(1.05);
+                }
+                img {
+                    transition: 0.4s;
+                    transition-timing-function: ease-out;
+                    cursor: pointer;
+                }
+                i {
+                    cursor: pointer;
+                    position: absolute;
+
+                    color: red;
+                    top: 50%;
+                    left: 50%;
+                    font-size: 20px;
+                    transform: translate(-50%, -50%);
+                    background-color: white;
+                    padding: 40px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .valentineTexts {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 5%;
+
+            .title {
+                font-family: Georgia, "Times New Roman", Times, serif;
+                font-weight: lighter;
+                padding-bottom: 20px;
+            }
+            .desc {
+                padding-bottom: 20px;
+                width: 550px;
+                p {
+                    opacity: 50%;
+                    font-size: 16px;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+                        "Open Sans", "Helvetica Neue", sans-serif;
+                    letter-spacing: 1px;
+                }
+            }
+            .icondescs {
+                .sec,
+                .third {
+                    margin-top: 10px;
+                }
+
+                .first,
+                .sec,
+                .third {
+                    span {
+                        margin-left: 5px;
+                        font-size: 16px;
+                        opacity: 50%;
+                        font-family: "Fuzzy Bubbles", cursive;
+                    }
+                }
+            }
+        }
+    }
+
+    #flowerexperts {
+        padding: 10% 0;
+        .info {
+            text-align: center;
+            .title {
+                h1{
+                    font-family: "Lora", serif;
+                }
+            }
+            .desc {
+                margin-top: 10px;
                 display: flex;
-                align-items: center;
+                justify-content: center;
+                opacity: 60%;
+                p {
+                    margin-bottom: 0%;
+                    width: 740px;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+                        "Open Sans", "Helvetica Neue", sans-serif;
+                    letter-spacing: 1px;
+                    font-size: 16px;
+                }
+            }
+        }
+        .experts {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5%;
+            .expert {
+                width: max-content;
+
+                text-align: center;
+                .name {
+                    p {
+
+                        margin-top: 15px;
+                        margin-bottom: 0%;
+                        font-family: "Lora", serif;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                    }
+                }
+                .job {
+                    p {
+                        margin-top: 3px;
+                        opacity: 30%;
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        font-size: 12px
+                        ;
+                        margin-bottom: 0%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    #subscribe{
+        
+        .parallax-window {
+            min-height: 500px;
+            background: transparent;
+            display: flex;
+            align-items: center;
+
+            .title{
+                margin-bottom: 15px;
+                text-align: center;
+                h1{
+                    color: white;
+                    font-family: "Lora", serif;
+                }
+            }
+            .subs{
+                position: relative;
+                text-align: center;
+                button{
+                    right: 25%;
+                    width: 13%;
+                    border: none;
+                    position: absolute;
+                    font-family:"Lora", serif ;
+                    padding: 1% 0;
+                    color: white;
+                    &:hover{
+                        background-color: red;
+                    }
+                    transition: 0.3s;
+                    transition-timing-function: ease-in-out;
+                    background-color: #f34f3f;
+                }
+                input{
+                    width: 50%;
+                    border: none;
+                    padding: 1% 0;
+                }
+            }
+        }
+    }
+
+    #blogs{
+        padding: 10% 0;
+        .info {
+            text-align: center;
+            .title {
+                h1{
+                    font-family: "Lora", serif;
+                }
+            }
+            .desc {
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                opacity: 60%;
+                p {
+                    margin-bottom: 0%;
+                    width: 740px;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+                        "Open Sans", "Helvetica Neue", sans-serif;
+                    letter-spacing: 1px;
+                    font-size: 16px;
+                }
+            }
+            
+        }
+
+        .blog{
+            margin-top: 40px;
+            text-align: center;
+            .image{
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+                span{
+                    transition: 0.2s;
+                    position: absolute;
+                    top: 3%;
+                    left: 3%;
+                    &:hover{
+                        color: red !important;
+                    }
+                }
+                img{
+                    transition: 0.6s;
+                    transition-timing-function:ease-in-out ;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                    width: 100%;
+                }
+            }
+            .title{
+                margin-top: 25px;
+                h4{
+                    font-size: 20px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+            }
+
+            .desc{ opacity: 60%;
+                
+                p{
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    margin-bottom: 0%;
+                }
             }
         }
     }
 }
 
 @media screen and(max-width:767px) {
+
+    main{
+        #subscribe{
+            .parallax-window{
+                .subs{
+                    button{
+                        width: max-content;
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        #flowerexperts{
+            .experts{
+                display: flex;
+    flex-direction: column;
+    align-items: center;
+            }
+        }
+    }
+
+    main {
+        #valentine {
+            .valentineTexts {
+                .desc {
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    main {
+        #products {
+            .filters-filterbtn {
+                .filterbtn {
+                    .filterLists {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        #products {
+            .filters-filterbtn {
+                .filterbtn {
+                    text-align: end !important;
+                    display: block !important;
+                }
+            }
+        }
+    }
+
+    .filters {
+        display: none !important;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
     main {
         #introduce {
             .flowersInfo {
@@ -701,7 +1087,7 @@ main {
     header {
         nav {
             .nav-right {
-                display: none;
+                display: none !important;
             }
         }
     }
@@ -721,9 +1107,104 @@ main {
             }
         }
     }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    main{
+        #flowerexperts{
+            .experts{
+                
+                flex-wrap: wrap;
+    
+            }
+        }
+    }
+
+    main{
+        #flowerexperts{
+            .experts{
+                .expert{
+                    width: 50%;
+                }
+               
+    
+            }
+        }
+    }
+
+
+    main {
+        #products {
+            .filters-filterbtn {
+                .filterbtn {
+                    .filterLists {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        #products {
+            .filters-filterbtn {
+                .filterbtn {
+                    text-align: end !important;
+                    display: block !important;
+                }
+            }
+        }
+    }
+
+    .filters {
+        display: none !important;
+    }
 
     .menu {
-        width: 100%;
+        width: 50%;
+    }
+
+    header {
+        nav {
+            .nav-right {
+                display: none;
+            }
+        }
+    }
+
+    header {
+        nav {
+            .menu-icon {
+                display: flex;
+                align-items: center;
+            }
+        }
     }
 }
+
+@media (min-width: 992px) {
+    main {
+        #products {
+            .filters-filterbtn {
+                .filterbtn {
+                    .mdfilterLists {
+                        display: none !important;
+                        // height: max-content;
+                        // width: max-content;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        #products {
+            .filters-filterbtn {
+                .mdfilters {
+                    display: none !important;
+                }
+            }
+        }
+    }
 }

@@ -9,6 +9,10 @@
   display: none !important;
 }
 
+.activeFilter {
+  color: red !important;
+}
+
 .customAnimate {
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
@@ -572,6 +576,18 @@ main #products {
   margin-top: 5%;
 }
 
+main #products .filters-filterbtn .mdfilters .mdcategories {
+  display: none;
+}
+
+main #products .filters-filterbtn .mdfilters .mdcategories span {
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 main #products .filters-filterbtn .filters span {
   cursor: pointer;
   font-size: 12px;
@@ -582,6 +598,141 @@ main #products .filters-filterbtn .filters span {
 
 main #products .filters-filterbtn .filters span:hover {
   color: red;
+}
+
+main #products .filters-filterbtn .filterbtn {
+  position: relative;
+}
+
+main #products .filters-filterbtn .filterbtn:hover .filterLists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists {
+  display: none;
+  padding-top: 25px;
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  background-color: white;
+  top: 100%;
+  z-index: 1;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists .sortby {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists .sortby h4 {
+  padding-left: 2rem;
+  font-size: 25px;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists .sortby ul {
+  list-style: none;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists .sortby ul li {
+  margin-top: 5px;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists .sortby ul li a {
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists .pricerange {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists .pricerange h4 {
+  padding-left: 2rem;
+  font-size: 25px;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists .pricerange ul {
+  list-style: none;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists .pricerange ul li {
+  margin-top: 5px;
+}
+
+main #products .filters-filterbtn .filterbtn .filterLists .pricerange ul li a {
+  color: black;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists {
+  text-align: start;
+  display: none;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists .sortby {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists .sortby h4 {
+  font-size: 25px;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists .sortby ul {
+  padding-left: 0%;
+  list-style: none;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists .sortby ul li {
+  margin-top: 5px;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists .sortby ul li a {
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists .pricerange {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists .pricerange h4 {
+  font-size: 25px;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists .pricerange ul {
+  padding-left: 0%;
+  list-style: none;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists .pricerange ul li {
+  margin-top: 5px;
+  padding-left: 0%;
+}
+
+main #products .filters-filterbtn .filterbtn .mdfilterLists .pricerange ul li a {
+  color: black;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 main #products .filters-filterbtn .filterbtn:hover {
@@ -706,14 +857,356 @@ main #products .product span:nth-child(1):hover {
   color: red;
 }
 
-@media screen and (max-width: 992px) {
-  main .menu {
-    width: 50%;
+main #valentine {
+  background-color: #f7f7f7;
+  padding: 8% 0;
+}
+
+main #valentine .valentineVideo {
+  overflow: hidden;
+  position: relative;
+}
+
+main #valentine .valentineVideo .videoImage img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main #valentine .valentineVideo .videoImage img {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  cursor: pointer;
+}
+
+main #valentine .valentineVideo .videoImage i {
+  cursor: pointer;
+  position: absolute;
+  color: red;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 40px;
+  border-radius: 50%;
+}
+
+main #valentine .valentineTexts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 5%;
+}
+
+main #valentine .valentineTexts .title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: lighter;
+  padding-bottom: 20px;
+}
+
+main #valentine .valentineTexts .desc {
+  padding-bottom: 20px;
+  width: 550px;
+}
+
+main #valentine .valentineTexts .desc p {
+  opacity: 50%;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
+}
+
+main #valentine .valentineTexts .icondescs .sec,
+main #valentine .valentineTexts .icondescs .third {
+  margin-top: 10px;
+}
+
+main #valentine .valentineTexts .icondescs .first span,
+main #valentine .valentineTexts .icondescs .sec span,
+main #valentine .valentineTexts .icondescs .third span {
+  margin-left: 5px;
+  font-size: 16px;
+  opacity: 50%;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+main #flowerexperts {
+  padding: 10% 0;
+}
+
+main #flowerexperts .info {
+  text-align: center;
+}
+
+main #flowerexperts .info .title h1 {
+  font-family: "Lora", serif;
+}
+
+main #flowerexperts .info .desc {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 60%;
+}
+
+main #flowerexperts .info .desc p {
+  margin-bottom: 0%;
+  width: 740px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+main #flowerexperts .experts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 5%;
+}
+
+main #flowerexperts .experts .expert {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+}
+
+main #flowerexperts .experts .expert .name p {
+  margin-top: 15px;
+  margin-bottom: 0%;
+  font-family: "Lora", serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+main #flowerexperts .experts .expert .job p {
+  margin-top: 3px;
+  opacity: 30%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  margin-bottom: 0%;
+}
+
+main #subscribe .parallax-window {
+  min-height: 500px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #subscribe .parallax-window .title {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+main #subscribe .parallax-window .title h1 {
+  color: white;
+  font-family: "Lora", serif;
+}
+
+main #subscribe .parallax-window .subs {
+  position: relative;
+  text-align: center;
+}
+
+main #subscribe .parallax-window .subs button {
+  right: 25%;
+  width: 13%;
+  border: none;
+  position: absolute;
+  font-family: "Lora", serif;
+  padding: 1% 0;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  background-color: #f34f3f;
+}
+
+main #subscribe .parallax-window .subs button:hover {
+  background-color: red;
+}
+
+main #subscribe .parallax-window .subs input {
+  width: 50%;
+  border: none;
+  padding: 1% 0;
+}
+
+main #blogs {
+  padding: 10% 0;
+}
+
+main #blogs .info {
+  text-align: center;
+}
+
+main #blogs .info .title h1 {
+  font-family: "Lora", serif;
+}
+
+main #blogs .info .desc {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 60%;
+}
+
+main #blogs .info .desc p {
+  margin-bottom: 0%;
+  width: 740px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+main #blogs .blog {
+  margin-top: 40px;
+  text-align: center;
+}
+
+main #blogs .blog .image {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+main #blogs .blog .image span {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+
+main #blogs .blog .image span:hover {
+  color: red !important;
+}
+
+main #blogs .blog .image img {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  width: 100%;
+}
+
+main #blogs .blog .image img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main #blogs .blog .title {
+  margin-top: 25px;
+}
+
+main #blogs .blog .title h4 {
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main #blogs .blog .desc {
+  opacity: 60%;
+}
+
+main #blogs .blog .desc p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 0%;
+}
+
+@media screen and (max-width: 767px) {
+  main #subscribe .parallax-window .subs button {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
-  main header nav .nav-right {
+  main #flowerexperts .experts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #valentine .valentineTexts .desc {
+    width: 300px;
+  }
+  main #products .filters-filterbtn .filterbtn .filterLists {
+    display: none !important;
+  }
+  main #products .filters-filterbtn .filterbtn {
+    text-align: end !important;
+    display: block !important;
+  }
+  .filters {
+    display: none !important;
+  }
+  .menu {
+    width: 100%;
+  }
+  main #introduce .flowersInfo .desc {
     display: none;
   }
-  main header nav .menu-icon {
+  main #introduce .flowersInfo {
+    width: 380px;
+    position: absolute;
+    top: 25%;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    left: -10%;
+  }
+  main #introduce .flowersInfo {
+    width: 380px;
+    position: absolute;
+    top: 25%;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    left: -10%;
+  }
+  main #introduce .images img {
+    height: 420px;
+  }
+  .container {
+    width: 85% !important;
+  }
+  header nav .nav-right {
+    display: none !important;
+  }
+  header nav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  header nav .menu-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -723,40 +1216,31 @@ main #products .product span:nth-child(1):hover {
   }
 }
 
-@media screen and (max-width: 767px) {
-  main main #introduce .flowersInfo .desc {
+@media (min-width: 768px) and (max-width: 992px) {
+  main #flowerexperts .experts {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main #flowerexperts .experts .expert {
+    width: 50%;
+  }
+  main #products .filters-filterbtn .filterbtn .filterLists {
+    display: none !important;
+  }
+  main #products .filters-filterbtn .filterbtn {
+    text-align: end !important;
+    display: block !important;
+  }
+  .filters {
+    display: none !important;
+  }
+  .menu {
+    width: 50%;
+  }
+  header nav .nav-right {
     display: none;
   }
-  main main #introduce .flowersInfo {
-    width: 380px;
-    position: absolute;
-    top: 25%;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    left: -10%;
-  }
-  main main #introduce .flowersInfo {
-    width: 380px;
-    position: absolute;
-    top: 25%;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    left: -10%;
-  }
-  main main #introduce .images img {
-    height: 420px;
-  }
-  main .container {
-    width: 85% !important;
-  }
-  main header nav .nav-right {
-    display: none;
-  }
-  main header nav {
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-  main header nav .menu-icon {
+  header nav .menu-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -764,8 +1248,14 @@ main #products .product span:nth-child(1):hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  main .menu {
-    width: 100%;
+}
+
+@media (min-width: 992px) {
+  main #products .filters-filterbtn .filterbtn .mdfilterLists {
+    display: none !important;
+  }
+  main #products .filters-filterbtn .mdfilters {
+    display: none !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

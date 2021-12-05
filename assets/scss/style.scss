@@ -14,8 +14,18 @@ body {
     display: none !important;
 }
 
+.active{
+    display: block !important;
+}
+
 .activeFilter {
     color: red !important;
+}
+
+.activeTab{
+   background-color: red !important;
+   color: white;
+
 }
 
 .customAnimate {
@@ -44,7 +54,8 @@ header {
                     list-style: none;
 
                     li {
-                        width: 200px;
+                        width: max-content;
+                        margin-left: 40px !important;
                         a {
                             span {
                                 font-size: 12px;
@@ -184,6 +195,7 @@ header {
                             display: block;
                             visibility: hidden;
                             height: 0%;
+                            // overflow: hidden;
 
                             transition: 0.3s;
 
@@ -240,6 +252,7 @@ header {
                                 display: block;
                                 padding-left: 30px;
                                 padding-right: 30px;
+                                width: 300px !important;
                                 li {
                                     margin-bottom: 25px;
                                 }
@@ -260,6 +273,12 @@ header {
 
                             visibility: hidden;
                             height: 0%;
+                            // overflow: hidden;
+                        }
+                        ul {
+                            width: max-content !important;
+                            height: max-content !important;
+                            padding-right: 3% !important;
                         }
                     }
                 }
@@ -281,11 +300,26 @@ header {
         justify-content: end;
         display: flex;
         .search-icon {
+            position: relative;
             margin-right: 50px;
             i {
+                cursor: pointer;
                 font-size: 20px;
             }
+            input {
+                position: absolute;
+                top: 60px;
+                height: 40px;
+                border: none;
+                right: -16px;
+                width: 200px;
+                font-family: cursive;
+                letter-spacing: 2px;
+                display: none;
+                z-index: 999;
+            }
         }
+
         .shopping {
             display: flex;
             .shop-icon {
@@ -333,6 +367,7 @@ header {
         transform: translateX(0%) !important;
     }
     .menu {
+        overflow: scroll;
         z-index: 1;
         transition: 0.3s;
         border-radius: 4px;
@@ -402,6 +437,23 @@ header {
                 }
             }
         }
+    }
+    a:after {
+        display: block;
+        content: "";
+        border-bottom: solid 1px black;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+    }
+
+    a:hover:after {
+        transform: scaleX(1);
+    }
+    a:after {
+        transform-origin: 100% 50%;
+    }
+    a:after {
+        transform-origin: 0% 50%;
     }
 }
 
@@ -645,6 +697,7 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 12px;
 
             .productImage {
                 overflow: hidden;
@@ -805,7 +858,7 @@ main {
         .info {
             text-align: center;
             .title {
-                h1{
+                h1 {
                     font-family: "Lora", serif;
                 }
             }
@@ -834,7 +887,6 @@ main {
                 text-align: center;
                 .name {
                     p {
-
                         margin-top: 15px;
                         margin-bottom: 0%;
                         font-family: "Lora", serif;
@@ -846,9 +898,9 @@ main {
                     p {
                         margin-top: 3px;
                         opacity: 30%;
-                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                        font-size: 12px
-                        ;
+                        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+                            Geneva, Verdana, sans-serif;
+                        font-size: 12px;
                         margin-bottom: 0%;
                     }
                 }
@@ -856,42 +908,40 @@ main {
         }
     }
 
-
-    #subscribe{
-        
+    #subscribe {
         .parallax-window {
             min-height: 500px;
             background: transparent;
             display: flex;
             align-items: center;
 
-            .title{
+            .title {
                 margin-bottom: 15px;
                 text-align: center;
-                h1{
+                h1 {
                     color: white;
                     font-family: "Lora", serif;
                 }
             }
-            .subs{
+            .subs {
                 position: relative;
                 text-align: center;
-                button{
+                button {
                     right: 25%;
                     width: 13%;
                     border: none;
                     position: absolute;
-                    font-family:"Lora", serif ;
+                    font-family: "Lora", serif;
                     padding: 1% 0;
                     color: white;
-                    &:hover{
+                    &:hover {
                         background-color: red;
                     }
                     transition: 0.3s;
                     transition-timing-function: ease-in-out;
                     background-color: #f34f3f;
                 }
-                input{
+                input {
                     width: 50%;
                     border: none;
                     padding: 1% 0;
@@ -900,12 +950,13 @@ main {
         }
     }
 
-    #blogs{
-        padding: 10% 0;
+    #blogs {
+        background-color: #f8f8f8;
+        padding: 8% 0;
         .info {
             text-align: center;
             .title {
-                h1{
+                h1 {
                     font-family: "Lora", serif;
                 }
             }
@@ -923,45 +974,46 @@ main {
                     font-size: 16px;
                 }
             }
-            
         }
 
-        .blog{
+        .blog {
             margin-top: 40px;
             text-align: center;
-            .image{
+            .image {
                 overflow: hidden;
                 cursor: pointer;
                 position: relative;
-                span{
+                span {
                     transition: 0.2s;
                     position: absolute;
                     top: 3%;
                     left: 3%;
-                    &:hover{
+                    &:hover {
                         color: red !important;
                     }
                 }
-                img{
+                img {
                     transition: 0.6s;
-                    transition-timing-function:ease-in-out ;
-                    &:hover{
+                    transition-timing-function: ease-in-out;
+                    &:hover {
                         transform: scale(1.05);
                     }
                     width: 100%;
                 }
             }
-            .title{
+            .title {
                 margin-top: 25px;
-                h4{
+                h4 {
                     font-size: 20px;
-                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+                        Verdana, sans-serif;
                 }
             }
 
-            .desc{ opacity: 60%;
-                
-                p{
+            .desc {
+                opacity: 60%;
+
+                p {
                     font-size: 14px;
                     letter-spacing: 1px;
                     margin-bottom: 0%;
@@ -969,15 +1021,720 @@ main {
             }
         }
     }
+
+    #slideimages {
+        padding: 8% 0;
+        .owl-carousel {
+            position: relative;
+            .owl-nav {
+                .owl-prew {
+                    transition: 0.3s;
+                    transition-timing-function: ease-out;
+                }
+                .owl-next {
+                    transition: 0.3s;
+                    transition-timing-function: ease-out;
+                }
+                position: absolute;
+                top: 42%;
+                left: 50%;
+                transform: translate(-50%, -42%);
+                width: 800px;
+                display: flex;
+                justify-content: space-between;
+                span {
+                    font-size: 60px;
+                }
+            }
+            .owl-dots {
+                display: none;
+            }
+            .item {
+                display: flex;
+                justify-content: center;
+                .expert {
+                    .photo {
+                        display: flex;
+                        justify-content: center;
+                        img {
+                            width: 75px;
+                        }
+                    }
+                    text-align: center;
+
+                    .title {
+                        h3 {
+                            margin-top: 15px;
+                            opacity: 60%;
+                            font-family: "Lora", serif;
+                            font-size: 22px;
+                        }
+                    }
+                    .name {
+                        p {
+                            margin-top: 15px;
+                            margin-bottom: 0%;
+                            font-family: "Lora", serif;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                        }
+                    }
+                    .job {
+                        p {
+                            margin-top: 3px;
+                            opacity: 50%;
+                            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+                                Geneva, Verdana, sans-serif;
+                            font-size: 12px;
+                            margin-bottom: 0%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #secondpageintroduce {
+        background-color: #fafaf9;
+        padding: 5% 0;
+        .info {
+            .title {
+                h1 {
+                    padding-left: 0;
+                    font-size: 50px !important;
+                    font-family: "Playfair Display", serif;
+                    margin-bottom: 0;
+                }
+            }
+
+            .desc {
+                p {
+                    font-size: 16px;
+                    opacity: 60%;
+                    letter-spacing: 1;
+                    font-family: "Lora", serif;
+                }
+            }
+        }
+    }
+
+    #orangeamarylls {
+        padding: 5% 0;
+        .images {
+            display: flex;
+            justify-content: space-between;
+            .littleImages {
+                .littleimage {
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    img {
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                        transition: 0.3s;
+                        width: 120px;
+                        height: 150px;
+                        cursor: pointer;
+                    }
+                }
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: space-between;
+            }
+            .bigImage {
+                margin-top: 10px;
+                // margin-left: 15px;
+                // display: flex;
+                overflow: hidden;
+                img {
+                    transition: 0.3s;
+                    width: 500px;
+                    height: 630px;
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        .infos {
+            display: flex;
+            flex-direction: column;
+
+            align-items: flex-end;
+            .info {
+                .title {
+                    h1 {
+                        font-family: "Playfair Display", serif;
+                    }
+                }
+
+                .price {
+                    margin-top: 10px;
+                    p {
+                        font-size: 15px;
+                        letter-spacing: 1px;
+                        opacity: 70%;
+                        color: #6d6a6a;
+                    }
+                }
+
+                .desc {
+                    width: 580px;
+                    margin-top: 10px;
+                    p {
+                        opacity: 50%;
+                        color: #6d6a6a;
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                    }
+                }
+
+                .details {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    span {
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+                            "Open Sans", "Helvetica Neue", sans-serif;
+                        a {
+                            text-decoration: none;
+                            font-size: 13px;
+                            letter-spacing: 0px;
+                            opacity: 50%;
+                            color: #6d6a6a;
+                        }
+                    }
+                }
+                .button {
+                    position: relative;
+                    .counter {
+                        position: absolute;
+                        top: 25%;
+                        left: 25%;
+                        span {
+                            margin: 0 20px;
+                        }
+                        .minus {
+                            cursor: pointer;
+                        }
+                        .plus {
+                            cursor: pointer;
+                        }
+                    }
+                    input {
+                        height: 50px;
+                        width: 250px;
+                        font-size: 12px;
+                        border-radius: 5px;
+                        border: 1px solid #6d6a6a;
+                        opacity: 60%;
+                    }
+                    button {
+                        border-radius: 5px;
+                        height: 50px;
+                        width: 140px;
+                        border: none;
+                        background-color: black;
+                        color: white;
+                        font-size: 12px;
+                        position: relative;
+                        right: 11px;
+                    }
+                }
+            }
+        }
+    }
+
+    #tabs {
+        border: 1px solid #dcdde1;
+        // border-top: 1px solid rgb(194, 194, 194);
+        .titles {
+            .title {
+               
+                button {
+                    border: 1px solid grey;
+                    width: 100%;
+                    height: 100%;
+                    padding: 14px 0;
+                    background-color: white;
+                    
+                    span {
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                        font-weight: lighter;
+                    }
+                }
+            }
+        }
+
+        .powerofflower {
+            display: none;
+            padding: 6% 0;
+            .title {
+                h1 {
+                    font-family: "Playfair Display", serif;
+                }
+            }
+            .desc {
+                font-size: 14px;
+                letter-spacing: 1px;
+                opacity: 50%;
+            }
+        }
+
+        .additional {
+            display: none;
+            padding: 8% 0;
+            span {
+                font-size: 14px;
+                letter-spacing: 1px;
+                opacity: 80%;
+            }
+        }
+
+        .reviews {
+            display: none;
+            padding: 8% 0;
+            .title {
+                h3 {
+                    font-family: "Playfair Display", serif;
+                }
+            }
+            .review {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .image {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .info {
+                    width: 90%;
+                    span {
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                        opacity: 80%;
+                        padding-bottom: 5px;
+                    }
+                    p {
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                        opacity: 80%;
+                        margin-bottom: 0;
+                        padding-top: 5px;
+                    }
+                }
+            }
+
+            .forum{
+                padding-top: 50px;
+                .title{
+                    h2{
+                        font-family: "Playfair Display", serif;
+                    }
+                }
+                .warning{
+                    span{
+                        font-size: 15px;
+                            letter-spacing: 1px;
+                            opacity: 80%;
+                            font-family: "Playfair Display", serif;
+                            
+                    }
+                }
+                form{
+                    span{
+                        font-size: 15px;
+                            letter-spacing: 1px;
+                            opacity: 80%;
+                            font-family: "Playfair Display", serif;
+                    }
+                    input{
+                        width: 100%;
+                    }
+                    #checkbox{
+                        width: 1%;
+                    }
+    
+                    button{
+                        background-color: red;
+                        cursor: pointer;
+                        color: white;
+                        border: none;
+                        padding: 10px 36px;
+                        margin-top: 20px;
+                        transition: 0.3s;
+                        &:hover{
+                            background-color: black;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    #accordionintroduce{
+        background-color: #fafaf9;
+        padding: 5% 0;
+        .info{
+            h1{
+                font-size: 50px ;
+                    font-family: "Playfair Display", serif;
+                    margin-bottom: 0;
+            }
+        }
+    }
+
+    #accordions{
+        .mid{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+        height: 100vh;
+        .topLeftAccordion,.topRightAccordion,.bottomLeftAccordion,.bottomRightAccordion{
+            padding: 10px;
+            .accordion{
+                padding: 10px 0;
+                .title-icon{
+                    cursor: pointer;
+                    padding: 15px 10px;
+                    border: 1px solid rgb(202, 202, 202);
+                    display: flex;
+                    transition: 0.3s;
+                    &:hover{
+                        background-color: red;
+                        color: white;
+                    }
+                    .title{
+                        
+                        font-size: 14px;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        letter-spacing: 2px;
+                        margin-left: 15px;
+                    }
+                    .icon{
+                        font-size: 14px;
+                    }
+                }
+
+                .article{
+                    display: none;
+                    padding: 35px 0px;
+                    font-size: 14px;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        letter-spacing: 2px;
+                        opacity: 60%;
+                }
+            }
+        }
+
+
+        .bottomAccordion{
+
+        }
+    }
+}
+
+footer {
+    background-color: #fefaf3;
+    .top {
+        padding: 3% 0;
+        border-bottom: 0.5px solid;
+        border: opacity($color: #000000);
+        display: flex;
+        justify-content: space-between;
+        .list {
+            h5 {
+                letter-spacing: 1px;
+                font-size: 12px;
+                line-height: 2em;
+                opacity: 95%;
+                margin-bottom: 1%;
+            }
+            ul {
+                list-style: none;
+                padding-left: 0px;
+                li {
+                    width: max-content;
+                    a {
+                        &:hover {
+                            color: red;
+                        }
+                        text-decoration: none;
+                        color: black;
+                        opacity: 30%;
+                        font-size: 12px;
+                        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+                            Geneva, Verdana, sans-serif;
+                    }
+                }
+            }
+        }
+    }
+    .bottom {
+        padding: 3% 0;
+        display: flex;
+        justify-content: space-between;
+        .copyright {
+            display: flex;
+            align-items: center;
+            span {
+                display: flex;
+
+                color: black;
+                opacity: 30%;
+                font-size: 12px;
+                letter-spacing: 0.2px;
+                font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+                    Verdana, sans-serif;
+                a {
+                    &:hover {
+                        color: red;
+                    }
+                    margin-left: 5px;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+
+        .bankicons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .socialmedia {
+            display: flex;
+            display: flex;
+            justify-content: flex-end;
+
+            .insta {
+                margin-right: 15px;
+            }
+            a {
+                &:hover {
+                    color: red;
+                }
+
+                text-decoration: none;
+                color: black;
+                opacity: 30%;
+                letter-spacing: 2px;
+                font-size: 12px;
+                font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+                    Verdana, sans-serif;
+            }
+        }
+    }
+    a:after {
+        display: block;
+        content: "";
+        border-bottom: solid 1px black;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+    }
+
+    a:hover:after {
+        transform: scaleX(1);
+    }
+    a:after {
+        transform-origin: 100% 50%;
+    }
+    a:after {
+        transform-origin: 0% 50%;
+    }
+}
+
+.row > * {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 @media screen and(max-width:767px) {
 
     main{
-        #subscribe{
-            .parallax-window{
-                .subs{
-                    button{
+        #accordions{
+            height: 100%;
+        }
+    }
+
+
+    main{
+        #accordionintroduce{
+            padding: 25% 0;
+        }
+    }
+
+
+    main {
+        #orangeamarylls {
+            .infos {
+                .info{
+                    .button{
+                        .counter{
+                            top: 10%;
+                            left: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+    main {
+        #orangeamarylls {
+            .infos {
+                align-items: flex-start;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    main {
+        #orangeamarylls {
+            .images {
+                .bigImage {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        #orangeamarylls {
+            .images {
+                .littleImages {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
+    main {
+        #orangeamarylls {
+            .images {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    main {
+        #orangeamarylls {
+            .infos {
+                .info {
+                    .desc {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        #orangeamarylls {
+            .infos {
+                .info {
+                    .button {
+                        button {
+                            margin-top: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+    main {
+        #orangeamarylls {
+            .infos {
+                .info {
+                    .button {
+                        display: flex;
+                        flex-direction: column;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        #orangeamarylls {
+            .infos {
+                .info {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    footer {
+        .bottom {
+            flex-wrap: wrap;
+        }
+    }
+
+    footer {
+        .bottom {
+            .copyright {
+                justify-content: center;
+            }
+        }
+    }
+
+    footer {
+        .bottom {
+            .socialmedia {
+                justify-content: center;
+            }
+        }
+    }
+
+    footer {
+        .top {
+            flex-wrap: wrap;
+        }
+    }
+
+    main {
+        #slideimages {
+            .owl-carousel {
+                .owl-nav {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    main {
+        #slideimages {
+            padding: 25% 0;
+        }
+    }
+
+    main {
+        #subscribe {
+            .parallax-window {
+                .subs {
+                    button {
                         width: max-content;
                     }
                 }
@@ -985,12 +1742,12 @@ main {
         }
     }
 
-    main{
-        #flowerexperts{
-            .experts{
+    main {
+        #flowerexperts {
+            .experts {
                 display: flex;
-    flex-direction: column;
-    align-items: center;
+                flex-direction: column;
+                align-items: center;
             }
         }
     }
@@ -1112,27 +1869,123 @@ main {
 @media (min-width: 768px) and (max-width: 992px) {
 
     main{
-        #flowerexperts{
-            .experts{
-                
-                flex-wrap: wrap;
-    
+        #tabs{
+            .titles{
+                justify-content: center;
             }
         }
     }
 
-    main{
-        #flowerexperts{
-            .experts{
-                .expert{
+    
+    main {
+        #orangeamarylls {
+            .images {
+                .bigImage {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        #orangeamarylls {
+            .images {
+                .bigImage {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    main {
+        #orangeamarylls {
+            .images {
+                .littleImages {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
+    main {
+        #orangeamarylls {
+            .images {
+                flex-wrap: wrap-reverse;
+            }
+        }
+    }
+
+    main {
+        #orangeamarylls {
+            .infos {
+                align-items: flex-start;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    footer {
+        .bottom {
+            flex-wrap: wrap;
+        }
+    }
+
+    footer {
+        .bottom {
+            .copyright {
+                justify-content: center;
+            }
+        }
+    }
+
+    footer {
+        .bottom {
+            .socialmedia {
+                justify-content: center;
+            }
+        }
+    }
+
+    footer {
+        .top {
+            flex-wrap: wrap;
+        }
+    }
+
+    main {
+        #slideimages {
+            .owl-carousel {
+                .owl-nav {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    main {
+        #flowerexperts {
+            .experts {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    main {
+        #flowerexperts {
+            .experts {
+                .expert {
                     width: 50%;
                 }
-               
-    
             }
         }
     }
-
 
     main {
         #products {

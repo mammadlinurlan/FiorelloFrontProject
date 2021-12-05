@@ -1,5 +1,20 @@
 $(document).ready(function () {
 
+    $(window).scroll(function(){
+
+        let stickynav = $(".stickyNav")
+            var yPos =    $(window).scrollTop()
+
+            if(yPos>1200){
+                $(stickynav).slideDown(400)
+            }
+            else{
+                $(stickynav).slideUp(400)
+            }
+    })
+
+
+
     $(".flowersInfo").css("opacity", "100")
 
 
@@ -127,8 +142,29 @@ $(document).ready(function () {
 
     })
 
+    $(".search-icon i").click(function(){
+        $(".search-icon input").slideToggle()
+    })
 
     $('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'});
+
+
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
 })
 
 

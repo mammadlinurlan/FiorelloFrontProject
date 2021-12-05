@@ -5,6 +5,19 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.animate {
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
+}
+
+.noHover {
+  pointer-events: none;
+}
+
 .unactiveProd {
   display: none !important;
 }
@@ -20,6 +33,17 @@
 .activeTab {
   background-color: red !important;
   color: white;
+}
+
+.activeArticle {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.activeIcon {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
 }
 
 .customAnimate {
@@ -531,6 +555,28 @@ main #introduce {
   position: relative;
 }
 
+@-webkit-keyframes zoomEffect {
+  from {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(2, 2);
+            transform: scale(2, 2);
+  }
+}
+
+@keyframes zoomEffect {
+  from {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(2, 2);
+            transform: scale(2, 2);
+  }
+}
+
 main #introduce .flowersInfo {
   opacity: 0;
   -webkit-transition: 5.5s;
@@ -635,6 +681,8 @@ main #introduce .images img {
           transition-timing-function: ease-in;
   width: 100%;
   height: 477px;
+  -webkit-animation: 120s ease 0s normal none infinite running zoomEffect;
+          animation: 120s ease 0s normal none infinite running zoomEffect;
 }
 
 main #products {
@@ -846,11 +894,6 @@ main #products .product .productImage img {
           transition-timing-function: ease-out;
 }
 
-main #products .product .productImage img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
 main #products .product .productTitle {
   cursor: pointer;
   margin-top: 5%;
@@ -882,14 +925,19 @@ main #products .product .productPrice span:nth-child(1) {
   width: -moz-max-content;
   width: max-content;
   opacity: 0;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
 
-main #products .product:hover span {
-  opacity: 0%;
+main #products .product:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main #products .product:hover span:nth-child(2), main #products .product:hover span:nth-child(3) {
+  display: none;
 }
 
 main #products .product:hover span:nth-child(1) {
@@ -904,8 +952,8 @@ main #products .product:hover span:nth-child(1) {
   width: max-content;
 }
 
-main #products .product:nth-child(6):hover span {
-  opacity: 0%;
+main #products .product:nth-child(6):hover span:nth-child(2), main #products .product:nth-child(6):hover span:nth-child(3) {
+  display: none;
 }
 
 main #products .product:nth-child(6):hover span:nth-child(1) {
@@ -918,10 +966,6 @@ main #products .product:nth-child(6):hover span:nth-child(1) {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-}
-
-main #products .product span:nth-child(1):hover {
-  color: red;
 }
 
 main #valentine {
@@ -1156,6 +1200,7 @@ main #blogs .info .desc p {
 main #blogs .blog {
   margin-top: 40px;
   text-align: center;
+  padding: 10px;
 }
 
 main #blogs .blog .image {
@@ -1640,15 +1685,24 @@ main #accordions .mid {
   height: 100%;
 }
 
-main #accordions .topLeftAccordion, main #accordions .topRightAccordion, main #accordions .bottomLeftAccordion, main #accordions .bottomRightAccordion {
+main #accordions .topLeftAccordion,
+main #accordions .topRightAccordion,
+main #accordions .bottomLeftAccordion,
+main #accordions .bottomRightAccordion {
   padding: 10px;
 }
 
-main #accordions .topLeftAccordion .accordion, main #accordions .topRightAccordion .accordion, main #accordions .bottomLeftAccordion .accordion, main #accordions .bottomRightAccordion .accordion {
+main #accordions .topLeftAccordion .accordion,
+main #accordions .topRightAccordion .accordion,
+main #accordions .bottomLeftAccordion .accordion,
+main #accordions .bottomRightAccordion .accordion {
   padding: 10px 0;
 }
 
-main #accordions .topLeftAccordion .accordion .title-icon, main #accordions .topRightAccordion .accordion .title-icon, main #accordions .bottomLeftAccordion .accordion .title-icon, main #accordions .bottomRightAccordion .accordion .title-icon {
+main #accordions .topLeftAccordion .accordion .title-icon,
+main #accordions .topRightAccordion .accordion .title-icon,
+main #accordions .bottomLeftAccordion .accordion .title-icon,
+main #accordions .bottomRightAccordion .accordion .title-icon {
   cursor: pointer;
   padding: 15px 10px;
   border: 1px solid #cacaca;
@@ -1659,29 +1713,435 @@ main #accordions .topLeftAccordion .accordion .title-icon, main #accordions .top
   transition: 0.3s;
 }
 
-main #accordions .topLeftAccordion .accordion .title-icon:hover, main #accordions .topRightAccordion .accordion .title-icon:hover, main #accordions .bottomLeftAccordion .accordion .title-icon:hover, main #accordions .bottomRightAccordion .accordion .title-icon:hover {
+main #accordions .topLeftAccordion .accordion .title-icon:hover,
+main #accordions .topRightAccordion .accordion .title-icon:hover,
+main #accordions .bottomLeftAccordion .accordion .title-icon:hover,
+main #accordions .bottomRightAccordion .accordion .title-icon:hover {
   background-color: red;
   color: white;
 }
 
-main #accordions .topLeftAccordion .accordion .title-icon .title, main #accordions .topRightAccordion .accordion .title-icon .title, main #accordions .bottomLeftAccordion .accordion .title-icon .title, main #accordions .bottomRightAccordion .accordion .title-icon .title {
+main #accordions .topLeftAccordion .accordion .title-icon .title,
+main #accordions .topRightAccordion .accordion .title-icon .title,
+main #accordions .bottomLeftAccordion .accordion .title-icon .title,
+main #accordions .bottomRightAccordion .accordion .title-icon .title {
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 2px;
   margin-left: 15px;
 }
 
-main #accordions .topLeftAccordion .accordion .title-icon .icon, main #accordions .topRightAccordion .accordion .title-icon .icon, main #accordions .bottomLeftAccordion .accordion .title-icon .icon, main #accordions .bottomRightAccordion .accordion .title-icon .icon {
+main #accordions .topLeftAccordion .accordion .title-icon .icon,
+main #accordions .topRightAccordion .accordion .title-icon .icon,
+main #accordions .bottomLeftAccordion .accordion .title-icon .icon,
+main #accordions .bottomRightAccordion .accordion .title-icon .icon {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
   font-size: 14px;
 }
 
-main #accordions .topLeftAccordion .accordion .article, main #accordions .topRightAccordion .accordion .article, main #accordions .bottomLeftAccordion .accordion .article, main #accordions .bottomRightAccordion .accordion .article {
+main #accordions .topLeftAccordion .accordion .article,
+main #accordions .topRightAccordion .accordion .article,
+main #accordions .bottomLeftAccordion .accordion .article,
+main #accordions .bottomRightAccordion .accordion .article {
   display: none;
   padding: 35px 0px;
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 2px;
   opacity: 60%;
+}
+
+main #tabsIntroduce {
+  background-color: #fafaf9;
+  padding: 5% 0;
+}
+
+main #tabsIntroduce .info h1 {
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0;
+}
+
+main #Tabs .top-tabs,
+main #Tabs .mid-tabs,
+main #Tabs .bottom-tabs {
+  padding: 100px 0;
+}
+
+main #Tabs .topLeftTab,
+main #Tabs .topRightTab,
+main #Tabs .midTab,
+main #Tabs .botTab {
+  padding: 20px;
+}
+
+main #Tabs .topLeftTab .titles .title button,
+main #Tabs .topRightTab .titles .title button,
+main #Tabs .midTab .titles .title button,
+main #Tabs .botTab .titles .title button {
+  border: 1px solid grey;
+  width: 100%;
+  height: 100%;
+  padding: 14px 0;
+  background-color: white;
+  letter-spacing: 2px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+}
+
+main #Tabs .topLeftTab .articles .article,
+main #Tabs .topRightTab .articles .article,
+main #Tabs .midTab .articles .article,
+main #Tabs .botTab .articles .article {
+  display: none;
+  width: 100%;
+  border: 1px solid #c2c2c2;
+  padding: 10px 40px;
+  height: 240px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #Tabs .topLeftTab .articles .article span,
+main #Tabs .topRightTab .articles .article span,
+main #Tabs .midTab .articles .article span,
+main #Tabs .botTab .articles .article span {
+  font-size: 14px;
+  opacity: 70%;
+  font-family: "Lora", serif;
+}
+
+main #Tabs .mid-tabs .midTab .titles .title button {
+  border: none;
+  text-align: start;
+}
+
+main #Tabs .mid-tabs .midTab .titles .title:nth-child(2) button, main #Tabs .mid-tabs .midTab .titles .title:nth-child(3) button {
+  text-align: center;
+}
+
+main #Tabs .mid-tabs .midTab .articles .article {
+  border-right: none;
+  border-left: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+main #Tabs .bottom-tabs .botTab .titles .title button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+main #Tabs .bottom-tabs .botTab .titles .title button:hover {
+  background-color: red;
+}
+
+main #shoplistIntroduce {
+  background-color: #fafaf9;
+  padding: 5% 0;
+}
+
+main #shoplistIntroduce .info h1 {
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0;
+}
+
+main #Products {
+  padding: 8% 0px;
+}
+
+main #Products .product {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+}
+
+main #Products .product:hover img {
+  opacity: 40%;
+  background-color: black;
+}
+
+main #Products .product:hover .productTitle,
+main #Products .product:hover .productPrice,
+main #Products .product:hover .addToCart {
+  opacity: 100%;
+}
+
+main #Products .product .productImage {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+main #Products .product .productImage img {
+  width: 100%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+main #Products .product .productImage img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main #Products .product .productTitle {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0%;
+  position: absolute;
+  top: 30%;
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+main #Products .product .productTitle p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+main #Products .product .productPrice {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+}
+
+main #Products .product .productPrice span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 80%;
+}
+
+main #Products .product .addToCart {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: red;
+}
+
+main #Products .product .addToCart:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: black;
+  color: white;
+}
+
+main #productSlider {
+  padding: 8% 0;
+  position: relative;
+}
+
+main #productSlider .owl-dots {
+  opacity: 0%;
+}
+
+main #productSlider .owl-nav {
+  position: absolute;
+  margin-top: 0%;
+  top: -30px;
+  right: 0px;
+}
+
+main #productSlider .owl-nav .owl-prev {
+  right: 2%;
+  top: 0%;
+  font-size: 20px;
+}
+
+main #productSlider .owl-nav .owl-next {
+  right: 0%;
+  top: 0%;
+  font-size: 20px;
+}
+
+main #productSlider p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+main #productSlider .product {
+  position: relative;
+  margin-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+}
+
+main #productSlider .product .productImage {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+main #productSlider .product .productImage img {
+  width: 300px;
+  height: 420px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+main #productSlider .product .productTitle {
+  cursor: pointer;
+  margin-top: 5%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main #productSlider .product .productTitle p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+main #productSlider .product .productPrice {
+  cursor: pointer;
+}
+
+main #productSlider .product .productPrice span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 50%;
+}
+
+main #productSlider .product .productPrice span:nth-child(1) {
+  line-height: 1.7;
+  font-size: 15px;
+  position: absolute;
+  -webkit-transform: translateX(-120px);
+          transform: translateX(-120px);
+  color: red;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+main #productSlider .product:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main #productSlider .product:hover span:nth-child(2), main #productSlider .product:hover span:nth-child(3) {
+  display: none;
+}
+
+main #productSlider .product:hover span:nth-child(1) {
+  opacity: 60%;
+  line-height: 1.7;
+  font-size: 15px;
+  position: absolute;
+  -webkit-transform: translateX(-35px);
+          transform: translateX(-35px);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main #productsOnly {
+  padding-top: 4%;
+  padding-bottom: 8%;
+}
+
+main #productsOnly .product {
+  position: relative;
+  margin-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+}
+
+main #productsOnly .product .productImage {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+main #productsOnly .product .productImage img {
+  width: 100%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+main #productsOnly .product .productImage img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main #productsOnly .product .productTitle {
+  cursor: pointer;
+  margin-top: 5%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main #productsOnly .product .productTitle p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+main #productsOnly .product .productPrice {
+  cursor: pointer;
+}
+
+main #productsOnly .product .productPrice span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 50%;
 }
 
 footer {
@@ -1839,7 +2299,23 @@ footer a:after {
   padding-left: 0;
 }
 
+.row {
+  --bs-gutter-x: 0;
+}
+
 @media screen and (max-width: 767px) {
+  main #Tabs .mid-tabs .midTab .articles .article {
+    height: 100%;
+  }
+  main #Tabs .mid-tabs .midTab .titles .title button {
+    text-align: start !important;
+  }
+  main #Tabs .bottom-tabs .botTab .articles .article {
+    height: 100%;
+  }
+  main #Tabs .top-tabs .articles .article {
+    height: 100%;
+  }
   main #accordions {
     height: 100%;
   }
@@ -1998,6 +2474,15 @@ footer a:after {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+  main #Tabs .bottom-tabs .botTab .articles .article {
+    height: 100%;
+  }
+  main #Tabs .mid-tabs .midTab .titles .title button {
+    text-align: start !important;
+  }
+  main #Tabs .top-tabs .articles .article {
+    height: 100%;
+  }
   main #tabs .titles {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

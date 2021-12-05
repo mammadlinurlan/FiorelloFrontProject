@@ -1,32 +1,14 @@
 $(document).ready(function () {
 
-    $(window).scroll(function(){
-
-        let stickynav = $(".stickyNav")
-            var yPos =    $(window).scrollTop()
-
-            if(yPos>1200){
-                $(stickynav).slideDown(400)
-            }
-            else{
-                $(stickynav).slideUp(400)
-            }
-    })
-
+    
 
 
     $(".flowersInfo").css("opacity", "100")
 
 
-    $(".menu-icon i").click(function () {
-        $(".menu").addClass("active")
+    
 
-    })
-    $(".myClose").click(function () {
-        $(".menu").removeClass("active")
-    })
-
-    $("")
+    
 
     let image = document.getElementById('interval')
 
@@ -53,26 +35,7 @@ $(document).ready(function () {
         image.src = images[random]
     })
 
-    $(".menu .menu-nav-links li.1").click(function (e) {
-        e.preventDefault();
-        let sublink = $(this).children(".sublinks")
-
-        let icon = $(this).find("i");
-        console.log("aue");
-
-        $(icon).toggleClass("customAnimate")
-        $(sublink).slideToggle()
-    })
-
-    $(".menu .menu-nav-links li .sublinks li").click(function (e) {
-
-        e.preventDefault()
-        let subsublink = $(this).children(".sub-subLinks")
-        $(subsublink).slideToggle()
-
-        $(".menu .menu-nav-links li.1").children(".sublinks").slideUp()
-
-    })
+    
 
 
 
@@ -142,9 +105,7 @@ $(document).ready(function () {
 
     })
 
-    $(".search-icon i").click(function(){
-        $(".search-icon input").slideToggle()
-    })
+    
 
     $('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'});
 

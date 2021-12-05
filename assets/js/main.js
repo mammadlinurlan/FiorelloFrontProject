@@ -1,16 +1,16 @@
 $(document).ready(function () {
 
-
+    let stickynav = $(".stickyNav")
+    
     $(window).scroll(function(){
 
-        let stickynav = $(".stickyNav")
             var yPos =    $(window).scrollTop()
 
             if(yPos>1200){
-                $(stickynav).slideDown(400)
+                $(stickynav).addClass("animate")
             }
             else{
-                $(stickynav).slideUp(400)
+                $(stickynav).removeClass("animate")
             }
     })
 
@@ -44,46 +44,29 @@ $(document).ready(function () {
 
     })
 
-    let mdfilters = document.querySelectorAll(".mdfilters .mdcategories span")
+    
 
-    $("#mdcategory").click(function(){
-        $(".mdcategories").slideToggle();
-    })
+    
 
-    $("#mdfilterbtn").click(function(){
-        $(".mdfilterLists").slideToggle();
-    })
+    
 
-    mdfilters.forEach((filter) => {
-        $(filter).click(function () {
-
-
-            mdfilters.forEach((f) =>{
-                $(f).removeClass("activeFilter")
-            })
-
-
-            let dataid = $(this).attr("data-id")
-            console.log(dataid);
-            products.forEach((delprod) => {
-                $(delprod).addClass("unactiveProd")
-            })
-            let stayedprod = Array.from(document.getElementsByClassName(dataid))
-            stayedprod.forEach((prod) => {
-                $(prod).removeClass("unactiveProd")
-            })
-
-
-            $(this).addClass("activeFilter")
-        })
-
-
-    })
-
+   
 
     $(".search-icon i").click(function(){
         $(".search-icon input").slideToggle()
     })
+
+    let span = document.querySelectorAll(".productPrice span:nth-child(1)")
+    console.log(span);
+
+    $(span).click(function(){
+        console.log(this);
+    })
+
+    // $(".product .productPrice").children().first().click(function(){
+
+       
+    // })
 
 }
 )

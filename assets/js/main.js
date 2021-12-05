@@ -1,17 +1,25 @@
 $(document).ready(function () {
-
-    let stickynav = $(".stickyNav")
     
+    let stickynav = $(".stickyNav")
+    let goUpBtn = $(".goHeadButton")
     $(window).scroll(function(){
 
             var yPos =    $(window).scrollTop()
 
-            if(yPos>1200){
+            if(yPos>500){
                 $(stickynav).addClass("animate")
+                $(goUpBtn).fadeIn()
             }
             else{
                 $(stickynav).removeClass("animate")
+                $(goUpBtn).fadeOut()
             }
+
+            $(goUpBtn).click(function(){
+                $(window).scrollTop(0)
+            })
+
+          
     })
 
 
@@ -57,7 +65,7 @@ $(document).ready(function () {
     })
 
     let span = document.querySelectorAll(".productPrice span:nth-child(1)")
-    console.log(span);
+
 
     $(span).click(function(){
         console.log(this);

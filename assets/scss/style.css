@@ -9,6 +9,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.fillBar {
+  width: 100% !important;
+}
+
 .animate {
   -webkit-transform: translateY(0px) !important;
           transform: translateY(0px) !important;
@@ -49,6 +53,17 @@ html {
 .customAnimate {
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
+}
+
+.goHeadButton {
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  background-color: red;
+  color: white;
+  padding: 7px 10px;
+  cursor: pointer;
+  display: none;
 }
 
 header nav {
@@ -2142,6 +2157,388 @@ main #productsOnly .product .productPrice span {
   font-size: 12px;
   letter-spacing: 1px;
   opacity: 50%;
+}
+
+main #progressBarIntroduce {
+  background-color: #fafaf9;
+  padding: 5% 0;
+}
+
+main #progressBarIntroduce .info h1 {
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0;
+}
+
+main #progressBars .top, main #progressBars .bottom {
+  padding: 110px 0;
+}
+
+main #progressBars .first, main #progressBars .sec, main #progressBars .third {
+  padding: 10px 0px;
+}
+
+main #progressBars .topLeft {
+  padding: 15px;
+}
+
+main #progressBars .topLeft .first {
+  position: relative;
+}
+
+main #progressBars .topLeft .first .bar {
+  width: 0%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  -webkit-transition: 2.375s;
+  transition: 2.375s;
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+main #progressBars .topLeft .first .bar .hidden {
+  height: 5px;
+  position: absolute;
+  z-index: -1;
+  background-color: #c2c2c2;
+  width: 100%;
+}
+
+main #progressBars .topLeft .first .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #progressBars .topLeft .first .infos span {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+main #progressBars .topLeft .sec {
+  position: relative;
+}
+
+main #progressBars .topLeft .sec .bar {
+  width: 0%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+main #progressBars .topLeft .sec .bar .hidden {
+  height: 5px;
+  position: absolute;
+  z-index: -1;
+  background-color: #c2c2c2;
+  width: 100%;
+}
+
+main #progressBars .topLeft .sec .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #progressBars .topLeft .sec .infos span {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+main #progressBars .topLeft .third {
+  position: relative;
+}
+
+main #progressBars .topLeft .third .bar {
+  width: 0%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  -webkit-transition: 1.375s;
+  transition: 1.375s;
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+main #progressBars .topLeft .third .bar .hidden {
+  height: 5px;
+  position: absolute;
+  z-index: -1;
+  background-color: #c2c2c2;
+  width: 100%;
+}
+
+main #progressBars .topLeft .third .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #progressBars .topLeft .third .infos span {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+main #progressBars .topRight {
+  padding: 15px;
+}
+
+main #progressBars .topRight .first {
+  position: relative;
+}
+
+main #progressBars .topRight .first .bar {
+  width: 0%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  -webkit-transition: 2.375s;
+  transition: 2.375s;
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+main #progressBars .topRight .first .bar .hidden {
+  height: 5px;
+  position: absolute;
+  z-index: -1;
+  background-color: #c2c2c2;
+  width: 100%;
+}
+
+main #progressBars .topRight .first .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #progressBars .topRight .first .infos span {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+main #progressBars .topRight .sec {
+  position: relative;
+}
+
+main #progressBars .topRight .sec .bar {
+  width: 0%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+main #progressBars .topRight .sec .bar .hidden {
+  height: 5px;
+  position: absolute;
+  z-index: -1;
+  background-color: #c2c2c2;
+  width: 100%;
+}
+
+main #progressBars .topRight .sec .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #progressBars .topRight .sec .infos span {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+main #progressBars .topRight .third {
+  position: relative;
+}
+
+main #progressBars .topRight .third .bar {
+  width: 0%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  -webkit-transition: 1.375s;
+  transition: 1.375s;
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+main #progressBars .topRight .third .bar .hidden {
+  height: 5px;
+  position: absolute;
+  z-index: -1;
+  background-color: #c2c2c2;
+  width: 100%;
+}
+
+main #progressBars .topRight .third .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #progressBars .topRight .third .infos span {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+main #progressBars .bottomBars {
+  padding: 15px;
+}
+
+main #progressBars .bottomBars .first {
+  position: relative;
+}
+
+main #progressBars .bottomBars .first .bar {
+  width: 0%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  -webkit-transition: 2.375s;
+  transition: 2.375s;
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+main #progressBars .bottomBars .first .bar .hidden {
+  height: 5px;
+  position: absolute;
+  z-index: -1;
+  background-color: #c2c2c2;
+  width: 100%;
+}
+
+main #progressBars .bottomBars .first .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #progressBars .bottomBars .first .infos span {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+main #progressBars .bottomBars .sec {
+  position: relative;
+}
+
+main #progressBars .bottomBars .sec .bar {
+  width: 0%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+main #progressBars .bottomBars .sec .bar .hidden {
+  height: 5px;
+  position: absolute;
+  z-index: -1;
+  background-color: #c2c2c2;
+  width: 100%;
+}
+
+main #progressBars .bottomBars .sec .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #progressBars .bottomBars .sec .infos span {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+main #progressBars .bottomBars .third {
+  position: relative;
+}
+
+main #progressBars .bottomBars .third .bar {
+  width: 0%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  -webkit-transition: 1.375s;
+  transition: 1.375s;
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+main #progressBars .bottomBars .third .bar .hidden {
+  height: 5px;
+  position: absolute;
+  z-index: -1;
+  background-color: #c2c2c2;
+  width: 100%;
+}
+
+main #progressBars .bottomBars .third .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #progressBars .bottomBars .third .infos span {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 footer {

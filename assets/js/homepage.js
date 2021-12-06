@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     
-
+    $(window).scrollTop(0)
 
     $(".flowersInfo").css("opacity", "100")
 

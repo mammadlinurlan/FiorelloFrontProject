@@ -26,7 +26,7 @@
         <i class="fas fa-chevron-up"></i>
     </div>
     <header>
-        <nav>
+        <nav class="mainNav">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="nav-left logo col-lg-2 col-md-4 col-8">
@@ -35,7 +35,9 @@
                                 alt=""></a>
                     </div>
                     <div class="nav-right col-lg-10">
-                        <div class="nav-links col-lg-7">
+                        <div class="nav-links col-lg-7" style="
+                                    display: flex;
+                                    align-items: center;">
                             <ul style="margin-bottom: 0%;">
                                 <li><a href=""><span>HOME</span></a>
 
@@ -242,13 +244,40 @@
                                 <div class="underbar"></div>
                             </ul>
                         </div>
-                        <div class="search-shopping col-lg-3">
+                        <div class="search-shopping col-lg-3" >
+                            <div class="basketList">
+                                <div class="listProducts">
+                                    
+                                </div>
+                                
+                                    <div class="price-buttons">
+                                        <div class="totalPrice">
+                                            <div class="totalText">
+                                                <span>TOTAL :</span>
+                                            </div>
+                                            <div class="priceText">
+                                                <span>$</span>
+                                                <span>0</span>
+                                            </div>
+                                        </div>
+                                        <div class="viewCart-checkOut">
+                                            <div class="viewCartBox">
+                                                <span>VIEW CART</span>
+                                            </div>
+                                            <div class="checkOutBox">
+                                                <span>CHECKOUT</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                            </div>
                             <div class="search-icon">
                                 <i class="fas fa-search"></i>
                                 <input type="search" placeholder="Search...">
                             </div>
 
-                            <div class="shopping">
+                            <div class="shopping" style="
+                                    height: 97.52px; align-items: center;">
                                 <div class="shop-icon">
                                     <i class="fas fa-shopping-bag"></i>
                                     <div class="bag-count">
@@ -256,11 +285,39 @@
                                     </div>
                                 </div>
                                 <div class="shop-basket">
-                                    <span>CART</span><span>($0)</span>
+                                    <span>CART</span><span>($</span><span>0</span><span>)</span>
                                 </div>
+                                <!-- <div class="basketList">
+                                    <div class="listProducts">
+        
+                                    </div>
+                                    
+                                        <div class="price-buttons">
+                                            <div class="totalPrice">
+                                                <div class="totalText">
+                                                    <span>TOTAL :</span>
+                                                </div>
+                                                <div class="priceText">
+                                                    <span>$</span>
+                                                    <span>0</span>
+                                                </div>
+                                            </div>
+                                            <div class="viewCart-checkOut">
+                                                <div class="viewCartBox">
+                                                    <span>VIEW CART</span>
+                                                </div>
+                                                <div class="checkOutBox">
+                                                    <span>CHECKOUT</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div> -->
+                                
                             </div>
 
                         </div>
+                        
 
                     </div>
                     <div class="menu-icon col-sm-4 col-4 col-md-8">
@@ -493,7 +550,7 @@
         top: 0;
         width: 100%;
         left: 0%;
-        
+        padding: 35px 0;
         transform: translateY(-100px);
         transition: 0.4s;">
             <div class="container">

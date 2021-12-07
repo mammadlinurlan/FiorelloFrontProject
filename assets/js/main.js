@@ -17,9 +17,21 @@ $(document).ready(function () {
         window.open("orangeamarylls.html","_self")
     })
 
-    $(".elements li:nth-child(2) a").click(function(e){
+    $(".classic li:nth-child(2) a").click(function(e){
         e.preventDefault();
         window.open("tabs.html","_self")
+    })
+
+    $(".classic li:nth-child(1) a").click(function(e){
+        e.preventDefault();
+        window.open("accordions.html","_self")
+    })
+
+    
+
+    $(".infographic li:nth-child(5) a").click(function(e){
+        e.preventDefault();
+        window.open("progressbar.html","_self")
     })
 
    
@@ -83,11 +95,11 @@ $(document).ready(function () {
         $(".menu").removeClass("active")
     })
 
-    $(".menu .menu-nav-links li.1").click(function (e) {
+    $(".menu .menu-nav-links li.1 a").click(function (e) {
         e.preventDefault();
-        let sublink = $(this).children(".sublinks")
+        let sublink = $(this).parent().children(".sublinks")
 
-        let icon = $(this).find("i");
+        let icon = $(this).children().last()
         console.log("aue");
 
         $(icon).toggleClass("customAnimate")
@@ -100,7 +112,7 @@ $(document).ready(function () {
         let subsublink = $(this).children(".sub-subLinks")
         $(subsublink).slideToggle()
 
-        $(".menu .menu-nav-links li.1").children(".sublinks").slideUp()
+        // $(".menu .menu-nav-links li.1").children(".sublinks").slideUp()
 
     })
 
@@ -119,6 +131,7 @@ $(document).ready(function () {
 
 
     $(".addToCardBtn").click(function () {
+        console.log("CLICKED");
 
         if (!localStorage.getItem("basket")) {
             localStorage.setItem("basket", JSON.stringify([]));

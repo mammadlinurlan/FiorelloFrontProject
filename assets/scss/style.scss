@@ -128,7 +128,7 @@ header {
                             }
                             .shopcards {
                                 visibility: visible;
-                                height: 89vh;
+                                height: 75vh;
                             }
                             
                         }
@@ -234,7 +234,7 @@ header {
                         .elements {
                             position: relative;
                             z-index: 50;
-                            transition: 0.2s;
+                            
                             width: 200px;
                             background-color: white;
                             position: absolute;
@@ -250,7 +250,7 @@ header {
                             height: 0%;
                             // overflow: hidden;
 
-                            transition: 0.3s;
+                            
 
                             .portfoliolayouts {
                                 padding: 6px 0;
@@ -314,6 +314,7 @@ header {
                             position: relative;
                             z-index: 50;
                             display: flex;
+                            overflow: hidden;
                             ul {
                                 display: block;
                                 padding-left: 30px;
@@ -658,6 +659,7 @@ header {
             }
         }
         .menu-nav-links {
+            
             overflow-y: scroll;
             ul {
                 list-style: none;
@@ -669,13 +671,17 @@ header {
                     line-height: 50px;
                     .sublinks {
                         display: none;
-                        .subSublinks {
-                            display: none;
-                        }
+                        
                         ul {
                             li {
                                 line-height: 30px;
                                 margin-left: 0px;
+                                .sub-Sublinks {
+                                    ul{
+                                        display: none !important;
+                                        overflow: hidden;
+                                    }
+                                }
                                 a {
                                     color: black;
                                     letter-spacing: 1px;
@@ -1947,6 +1953,7 @@ main {
         //     width: 100%;
         // }
         .product {
+            // width: 100%;
             position: relative;
             margin-top: 3%;
             display: flex;
@@ -1975,22 +1982,6 @@ main {
                 }
             }
             .productPrice {
-                &:hover{
-                    span {
-                        &:nth-child(2),
-                        &:nth-child(3) {
-                            display: none;
-                        }
-                        &:nth-child(1) {
-                            opacity: 60%;
-                            line-height: 1.7;
-                            font-size: 15px;
-                            position: absolute;
-                            transform:translateX(-46px);
-                            width: max-content;
-                        }
-                    }
-                }
                 cursor: pointer;
                 span {
                     font-size: 12px;
@@ -2003,30 +1994,10 @@ main {
                         font-size: 15px;
                         position: absolute;
                         transform: translateX(-120px);
-                        color: red;
                         width: max-content;
                         opacity: 0;
                         transition: 0.2s;
                         transition-timing-function: ease-in-out;
-                    }
-                }
-            }
-            &:nth-child(6) {
-                &:hover {
-                    span {
-                        &:nth-child(2),
-                        &:nth-child(3), 
-                        &:nth-child(4){
-                            display: none;
-                        }
-                        &:nth-child(1) {
-                            opacity: 60%;
-                            line-height: 1.7;
-                            font-size: 15px;
-                            position: absolute;
-                            transform:translateX(-46px);
-                            width: max-content;
-                        }
                     }
                 }
             }
@@ -2040,6 +2011,7 @@ main {
                     &:nth-child(3) {
                         display: none;
                     }
+
                     &:nth-child(1) {
                         opacity: 60%;
                         line-height: 1.7;
@@ -2050,6 +2022,35 @@ main {
                     }
                 }
             }
+            // .productPrice {
+                
+
+
+            //     &:hover{
+                    
+            //         span {
+            //             &:nth-child(2),
+            //             &:nth-child(3) {
+            //                 display: none;
+            //             }
+            //             &:nth-child(1) {
+            //                 opacity: 60%;
+            //                 line-height: 1.7;
+            //                 font-size: 15px;
+            //                 position: absolute;
+            //                 transform:translateX(-46px);
+            //                 width: max-content;
+            //             }
+            //         }
+            //     }
+
+               
+            //     cursor: pointer;
+                
+            // }
+            
+
+            
 
             
         }

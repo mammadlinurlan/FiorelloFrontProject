@@ -142,7 +142,7 @@ header nav .nav-right .nav-links ul li:hover .elements {
 
 header nav .nav-right .nav-links ul li:hover .shopcards {
   visibility: visible;
-  height: 89vh;
+  height: 75vh;
 }
 
 header nav .nav-right .nav-links ul li .elements li {
@@ -208,8 +208,6 @@ header nav .nav-right .nav-links ul li .blog,
 header nav .nav-right .nav-links ul li .elements {
   position: relative;
   z-index: 50;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
   width: 200px;
   background-color: white;
   position: absolute;
@@ -219,8 +217,6 @@ header nav .nav-right .nav-links ul li .elements {
   display: block;
   visibility: hidden;
   height: 0%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 header nav .nav-right .nav-links ul li .home li,
@@ -304,6 +300,7 @@ header nav .nav-right .nav-links ul li .shopcards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   left: 0;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -674,13 +671,14 @@ header .menu .menu-nav-links ul li .sublinks {
   display: none;
 }
 
-header .menu .menu-nav-links ul li .sublinks .subSublinks {
-  display: none;
-}
-
 header .menu .menu-nav-links ul li .sublinks ul li {
   line-height: 30px;
   margin-left: 0px;
+}
+
+header .menu .menu-nav-links ul li .sublinks ul li .sub-Sublinks ul {
+  display: none !important;
+  overflow: hidden;
 }
 
 header .menu .menu-nav-links ul li .sublinks ul li a {
@@ -2228,22 +2226,6 @@ main #productSlider .product .productPrice {
   cursor: pointer;
 }
 
-main #productSlider .product .productPrice:hover span:nth-child(2), main #productSlider .product .productPrice:hover span:nth-child(3) {
-  display: none;
-}
-
-main #productSlider .product .productPrice:hover span:nth-child(1) {
-  opacity: 60%;
-  line-height: 1.7;
-  font-size: 15px;
-  position: absolute;
-  -webkit-transform: translateX(-46px);
-          transform: translateX(-46px);
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
 main #productSlider .product .productPrice span {
   font-size: 12px;
   letter-spacing: 1px;
@@ -2256,7 +2238,6 @@ main #productSlider .product .productPrice span:nth-child(1) {
   position: absolute;
   -webkit-transform: translateX(-120px);
           transform: translateX(-120px);
-  color: red;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -2265,22 +2246,6 @@ main #productSlider .product .productPrice span:nth-child(1) {
   transition: 0.2s;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
-}
-
-main #productSlider .product:nth-child(6):hover span:nth-child(2), main #productSlider .product:nth-child(6):hover span:nth-child(3), main #productSlider .product:nth-child(6):hover span:nth-child(4) {
-  display: none;
-}
-
-main #productSlider .product:nth-child(6):hover span:nth-child(1) {
-  opacity: 60%;
-  line-height: 1.7;
-  font-size: 15px;
-  position: absolute;
-  -webkit-transform: translateX(-46px);
-          transform: translateX(-46px);
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 
 main #productSlider .product:hover img {

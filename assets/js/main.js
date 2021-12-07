@@ -7,6 +7,23 @@ $(document).ready(function () {
         window.open("index.html", "_self")
     })
 
+    $(".home li:nth-child(1) a").click(function(e){
+        e.preventDefault();
+        window.open("index.html","_self")
+    })
+
+    $(".producttypes li:nth-child(2) a").click(function(e){
+        e.preventDefault();
+        window.open("orangeamarylls.html","_self")
+    })
+
+    $(".elements li:nth-child(2) a").click(function(e){
+        e.preventDefault();
+        window.open("tabs.html","_self")
+    })
+
+   
+
 
 
     let stickynav = $(".stickyNav")
@@ -32,15 +49,15 @@ $(document).ready(function () {
     })
 
     $(".search-shopping .shopping").hover(function () {
-        $(".search-shopping .basketList").css("opacity", "100")
+        $(".search-shopping .basketList").css("height", "220px")
     }, function () {
-        $(".search-shopping .basketList").css("opacity", "0%")
+        $(".search-shopping .basketList").css("height", "0%")
     })
 
     $(".search-shopping .basketList").hover(function () {
-        $(this).css("opacity", "100")
+        $(this).css("height", "220px")
     }, function () {
-        $(this).css("opacity", "0%")
+        $(this).css("height", "0%")
     })
 
 

@@ -145,9 +145,30 @@ header nav .nav-right .nav-links ul li:hover .shopcards {
   height: 89vh;
 }
 
-header nav .nav-right .nav-links ul li:hover .portfoliolayouts {
+header nav .nav-right .nav-links ul li .elements li {
+  margin-bottom: 25px;
+}
+
+header nav .nav-right .nav-links ul li .elements li ul {
+  padding: 10px 0px;
+  top: 40px;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0%;
+  display: block;
+  background-color: white;
+  position: absolute;
+  right: 230px;
+  padding-left: 0%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header nav .nav-right .nav-links ul li .elements li:hover ul {
+  height: 100% !important;
   visibility: visible;
-  height: 20%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header nav .nav-right .nav-links ul li .elements .typographyli:hover .typography {
@@ -166,66 +187,18 @@ header nav .nav-right .nav-links ul li .elements .interactiveli:hover .interacti
   opacity: 100%;
 }
 
-header nav .nav-right .nav-links ul li .elements li {
-  margin-bottom: 25px;
-}
-
-header nav .nav-right .nav-links ul li .elements li ul {
-  display: block;
-  background-color: white;
-  position: absolute;
-  right: 170px;
-  padding-left: 0%;
-}
-
-header nav .nav-right .nav-links ul li .elements li .classic {
-  top: 60px;
-  opacity: 0;
-}
-
-header nav .nav-right .nav-links ul li .elements li .classic:hover {
-  opacity: 100%;
-}
-
-header nav .nav-right .nav-links ul li .elements li .infographic {
-  top: 70px;
-  opacity: 0;
-}
-
-header nav .nav-right .nav-links ul li .elements li .infographic:hover {
-  opacity: 100%;
-}
-
-header nav .nav-right .nav-links ul li .elements li .interactive {
-  top: 80px;
-  opacity: 0;
-}
-
-header nav .nav-right .nav-links ul li .elements li .interactive:hover {
-  opacity: 100%;
-}
-
-header nav .nav-right .nav-links ul li .elements li .typography {
-  top: 90px;
-  opacity: 0;
-}
-
-header nav .nav-right .nav-links ul li .elements li .typography:hover {
-  opacity: 100%;
-}
-
 header nav .nav-right .nav-links ul li .elements i {
   margin-right: 40px;
 }
 
 header nav .nav-right .nav-links ul li .portfolio #prtflsingle:hover .portfoliosingle {
   visibility: visible;
-  height: 80%;
+  height: 80% !important;
 }
 
 header nav .nav-right .nav-links ul li .portfolio #prtflayout:hover .portfoliolayouts {
   visibility: visible;
-  height: 80%;
+  height: 80% !important;
 }
 
 header nav .nav-right .nav-links ul li .home,
@@ -263,14 +236,18 @@ header nav .nav-right .nav-links ul li .pages .portfoliolayouts,
 header nav .nav-right .nav-links ul li .portfolio .portfoliolayouts,
 header nav .nav-right .nav-links ul li .blog .portfoliolayouts,
 header nav .nav-right .nav-links ul li .elements .portfoliolayouts {
+  padding: 6px 0;
+  overflow: hidden;
   display: block;
   background-color: white;
   position: absolute;
-  top: 120px;
-  left: 200px;
+  top: 190px;
+  left: 255px;
   padding-left: 0;
   visibility: hidden;
-  height: 0%;
+  height: 0% !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 header nav .nav-right .nav-links ul li .home .portfoliosingle,
@@ -278,14 +255,19 @@ header nav .nav-right .nav-links ul li .pages .portfoliosingle,
 header nav .nav-right .nav-links ul li .portfolio .portfoliosingle,
 header nav .nav-right .nav-links ul li .blog .portfoliosingle,
 header nav .nav-right .nav-links ul li .elements .portfoliosingle {
+  padding: 6px 0;
+  overflow: hidden;
+  height: 0% !important;
   display: block;
   visibility: hidden;
   height: 0%;
   background-color: white;
   position: absolute;
-  top: 140px;
-  left: 200px;
+  top: 200px;
+  left: 255px;
   padding-left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 header nav .nav-right .nav-links ul li .home {
@@ -297,18 +279,23 @@ header nav .nav-right .nav-links ul li .blog {
 }
 
 header nav .nav-right .nav-links ul li .blog .post:hover .bloginlinks {
-  opacity: 100%;
+  visibility: visible;
+  height: 250px !important;
 }
 
 header nav .nav-right .nav-links ul li .blog .post .bloginlinks {
+  overflow: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   display: block;
   position: absolute;
-  left: 200px;
+  left: 210px;
   top: 104px;
   background-color: white;
   padding-left: 0%;
   padding-right: 0%;
-  opacity: 0;
+  visibility: hidden;
+  height: 0% !important;
 }
 
 header nav .nav-right .nav-links ul li .shopcards {
@@ -392,24 +379,36 @@ header .search-shopping .basketList {
   position: absolute;
   top: 100%;
   right: 0%;
-  opacity: 0;
+  height: 0%;
   z-index: 999;
 }
 
 header .search-shopping .basketList .listProducts {
   padding-top: 15px;
-  overflow: hidden;
+  overflow: scroll;
+  height: 120px;
 }
 
 header .search-shopping .basketList .listProducts .product {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   border: 1px;
   height: 62px;
+}
+
+header .search-shopping .basketList .listProducts .product div:nth-child(2) {
+  width: 100%;
+  margin-top: 3px;
+}
+
+header .search-shopping .basketList .listProducts .product div:nth-child(2) p {
+  margin-bottom: 0.4rem;
+  letter-spacing: 1px;
+  font-size: 11px;
+  margin-left: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header .search-shopping .basketList .listProducts .product .image {
@@ -441,6 +440,8 @@ header .search-shopping .basketList .price-buttons .viewCart-checkOut {
 }
 
 header .search-shopping .basketList .price-buttons .viewCart-checkOut .viewCartBox {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -459,6 +460,11 @@ header .search-shopping .basketList .price-buttons .viewCart-checkOut .viewCartB
   height: 30px;
 }
 
+header .search-shopping .basketList .price-buttons .viewCart-checkOut .viewCartBox:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 header .search-shopping .basketList .price-buttons .viewCart-checkOut .viewCartBox span {
   font-size: 8px;
   color: white;
@@ -466,6 +472,8 @@ header .search-shopping .basketList .price-buttons .viewCart-checkOut .viewCartB
 }
 
 header .search-shopping .basketList .price-buttons .viewCart-checkOut .checkOutBox {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -482,6 +490,11 @@ header .search-shopping .basketList .price-buttons .viewCart-checkOut .checkOutB
   background-color: black;
   width: 48%;
   height: 30px;
+}
+
+header .search-shopping .basketList .price-buttons .viewCart-checkOut .checkOutBox:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 header .search-shopping .basketList .price-buttons .viewCart-checkOut .checkOutBox span {

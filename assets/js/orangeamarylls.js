@@ -1,10 +1,13 @@
 $(document).ready(function () {
 
-    let count = $(".counter .count")
-
+    let count = $(".counter .counting")
+    $(count).click(function(){
+        console.log("aue");
+    })
     var counter = 0
 
     $(".minus").click(function () {
+        console.log("aue");
         if (
             counter > 0
         ) {

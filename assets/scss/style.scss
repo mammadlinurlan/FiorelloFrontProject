@@ -130,13 +130,57 @@ header {
                                 visibility: visible;
                                 height: 89vh;
                             }
-                            .portfoliolayouts {
-                                visibility: visible;
-                                height: 20%;
-                            }
+                            
                         }
 
                         .elements {
+                            li {
+                                margin-bottom: 25px;
+                                
+                                ul {
+                                    padding: 10px 0px;
+                                    top: 40px;
+                                    overflow: hidden;
+                                    visibility: hidden;
+                                    height: 0%;
+                                    display: block;
+                                    background-color: white;
+                                    position: absolute;
+                                    right: 230px;
+                                    padding-left: 0%;
+                                    transition: 0.5s;
+                                }
+                                &:hover{
+                                    ul{
+                                        // display: block;
+                                        height: 100% !important;
+                                        visibility: visible;
+                                        transition: 0.5s;
+                                    }
+                                }
+                                // .classic {
+                                //     top: 60px;
+                                //     // display: none;
+                                //     height: 0px !important;
+                                //     transition: 0.2s;
+                                //     overflow: hidden;
+                                // }
+                                // .infographic {
+                                //     top: 70px;
+                                   
+                                //     display: none;
+                                // }
+                                // .interactive {
+                                //     top: 80px;
+                                    
+                                //     display: none;
+                                // }
+                                // .typography {
+                                //     top: 90px;
+                                    
+                                //     display: none;
+                                // }
+                            }
                             .typographyli:hover {
                                 .typography {
                                     opacity: 100%;
@@ -157,44 +201,7 @@ header {
                                     opacity: 100%;
                                 }
                             }
-                            li {
-                                margin-bottom: 25px;
-                                ul {
-                                    display: block;
-                                    background-color: white;
-                                    position: absolute;
-                                    right: 170px;
-                                    padding-left: 0%;
-                                }
-                                .classic {
-                                    top: 60px;
-                                    &:hover {
-                                        opacity: 100%;
-                                    }
-                                    opacity: 0;
-                                }
-                                .infographic {
-                                    top: 70px;
-                                    &:hover {
-                                        opacity: 100%;
-                                    }
-                                    opacity: 0;
-                                }
-                                .interactive {
-                                    top: 80px;
-                                    &:hover {
-                                        opacity: 100%;
-                                    }
-                                    opacity: 0;
-                                }
-                                .typography {
-                                    top: 90px;
-                                    &:hover {
-                                        opacity: 100%;
-                                    }
-                                    opacity: 0;
-                                }
-                            }
+                            
                         }
 
                         .elements {
@@ -204,16 +211,18 @@ header {
                         }
 
                         .portfolio {
+
                             #prtflsingle:hover {
                                 .portfoliosingle {
                                     visibility: visible;
-                                    height: 80%;
+                                    height: 80% !important;
                                 }
                             }
                             #prtflayout:hover {
                                 .portfoliolayouts {
                                     visibility: visible;
-                                    height: 80%;
+                                    height: 80% !important;
+                                    
                                 }
                             }
                         }
@@ -244,24 +253,33 @@ header {
                             transition: 0.3s;
 
                             .portfoliolayouts {
+                                padding: 6px 0;
+
+                                overflow: hidden;
                                 display: block;
                                 background-color: white;
                                 position: absolute;
-                                top: 120px;
-                                left: 200px;
+                                top: 190px;
+                                left: 255px;
                                 padding-left: 0;
                                 visibility: hidden;
-                                height: 0%;
+                                height: 0% !important;
+                                transition: 0.3s;
                             }
                             .portfoliosingle {
+                                padding: 6px 0;
+                                overflow: hidden;
+                                height: 0% !important;
+
                                 display: block;
                                 visibility: hidden;
                                 height: 0%;
                                 background-color: white;
                                 position: absolute;
-                                top: 140px;
-                                left: 200px;
+                                top: 200px;
+                                left: 255px;
                                 padding-left: 0;
+                                transition: 0.3s;
                             }
                         }
                         .home {
@@ -272,18 +290,22 @@ header {
                             .post {
                                 &:hover {
                                     .bloginlinks {
-                                        opacity: 100%;
+                                        visibility: visible;
+                                        height: 250px !important;
                                     }
                                 }
                                 .bloginlinks {
+                                    overflow: hidden;
+                                    transition: 0.2s;
                                     display: block;
                                     position: absolute;
-                                    left: 200px;
+                                    left: 210px;
                                     top: 104px;
                                     background-color: white;
                                     padding-left: 0%;
                                     padding-right: 0%;
-                                    opacity: 0;
+                                    visibility: hidden;
+                                    height: 0% !important;
                                 }
                             }
                         }
@@ -356,14 +378,29 @@ header {
             position: absolute;
             top: 100%;
             right: 0%;
-            opacity: 0;
+            height: 0%;
             z-index: 999;
             .listProducts {
                 padding-top: 15px;
-                overflow: hidden;
+                overflow: scroll;
+                height: 120px;
                 .product{
+                    margin-top: 10px;
+                    div{
+                        &:nth-child(2){
+                            width: 100%;
+                            margin-top: 3px;
+                            p{
+                                margin-bottom: 0.4rem;
+                                letter-spacing: 1px;
+                                font-size: 11px;
+                                margin-left: 10px;
+                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            }
+                        }
+                    }
                     display: flex;
-                    justify-content: space-between;
+                    
                     border: 1px;
                     // width: 50px;
                     height: 62px;
@@ -391,6 +428,10 @@ header {
                     display: flex;
                     justify-content: space-between;
                     .viewCartBox {
+                        transition: 0.2s;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
                         cursor: pointer;
                         display: flex;
                         /* padding: 5px 0; */
@@ -408,6 +449,10 @@ header {
                         }
                     }
                     .checkOutBox {
+                        transition: 0.2s;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
                         cursor: pointer;
                         display: flex;
                         /* padding: 5px 0; */

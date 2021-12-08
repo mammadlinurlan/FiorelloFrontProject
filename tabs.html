@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 <link rel="stylesheet" href="./assets/scss/owl.carousel.min.css">
 <link rel="stylesheet" href="./assets/scss/owl.theme.default.min.css">
@@ -838,7 +839,7 @@
         <section id="Tabs">
             <div class="container">
                 <div class="row top-tabs">
-                    <div class="col-lg-6 col-md-6 col-12 topLeftTab">
+                    <div data-aos="zoom-out-left" class="col-lg-6 col-md-6 col-12 topLeftTab">
                         <div class="row titles">
                             <div class="col-lg-3 title" data-id="first">
                                 <button type="button">Services</button>
@@ -867,7 +868,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-12 topRightTab">
+                    <div data-aos="zoom-out-right" class="col-lg-6 col-md-6 col-12 topRightTab">
                         <div class="row titles">
                             <div class="col-lg-3 title" data-id="first">
                                 <button type="button">Services</button>
@@ -899,7 +900,8 @@
                 </div>
 
                 <div class="row mid-tabs">
-                    <div class="col-lg-12 midTab">
+                    <div data-aos="fade-up"
+                    data-aos-duration="3000" class="col-lg-12 midTab">
                         <div class="row titles">
                             <div class="col-lg-1 title" data-id="first">
                                 <button type="button">Services</button>
@@ -931,7 +933,8 @@
                 </div>
 
                 <div class="row bottom-tabs">
-                    <div class="col-lg-12 botTab">
+                    <div data-aos="fade-up"
+                    data-aos-duration="3000" class="col-lg-12 botTab">
                         <div class="row">
                             <div class="col-lg-2 titles">
                                 <div class=" title" data-id="first">
@@ -1047,6 +1050,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 <script src="./assets/js/owl.carousel.min.js"></script>
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/tabs.js"></script>

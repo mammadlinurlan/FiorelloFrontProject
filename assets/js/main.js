@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-
+    AOS.init();
 
     $(".nav-left a").click(function (e) {
         e.preventDefault();

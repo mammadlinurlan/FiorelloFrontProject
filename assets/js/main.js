@@ -59,19 +59,38 @@ $(document).ready(function () {
 
 
     })
+    
 
-    $(".search-shopping .shopping").hover(function () {
-        $(".search-shopping .basketList").css("height", "220px")
-    }, function () {
-        $(".search-shopping .basketList").css("height", "0%")
+    // console.log(basketlen.length);
+    
+
+    $(".search-shopping .shopping").hover(function(){
+        let basketlen = JSON.parse(localStorage.getItem("basket"))
+        if(basketlen.length == 0){
+            alert("basket is empty")
+        }
+        else{
+            $(".search-shopping .shopping").hover(function () {
+        
+                $(".search-shopping .basketList").css("height", "220px")
+            }, function () {
+                $(".search-shopping .basketList").css("height", "0%")
+            })
+        
+            $(".search-shopping .basketList").hover(function () {
+                $(this).css("height", "220px")
+            }, function () {
+                $(this).css("height", "0%")
+            })
+        
+        }
+       
+
     })
 
-    $(".search-shopping .basketList").hover(function () {
-        $(this).css("height", "220px")
-    }, function () {
-        $(this).css("height", "0%")
-    })
 
+    
+   
 
     // $(".search-shopping .shopping").hover(function(){
     //     $(".search-shopping .basketList").slideDown()
@@ -95,7 +114,14 @@ $(document).ready(function () {
         $(".menu").removeClass("active")
     })
 
+
+    $(".classic li:nth-child(1) a").click(function(){
+        console.log("aue");
+    })
+
     $(".menu .menu-nav-links li.1 a").click(function (e) {
+        
+
         e.preventDefault();
         let sublink = $(this).parent().children(".sublinks")
 
@@ -107,25 +133,51 @@ $(document).ready(function () {
     })
 
     $(".menu .menu-nav-links li .sublinks li").click(function (e) {
+        e.stopPropagation()
 
         e.preventDefault()
         let subsublink = $(this).children(".sub-subLinks")
         $(subsublink).slideToggle()
+      
+        
 
         // $(".menu .menu-nav-links li.1").children(".sublinks").slideUp()
 
     })
 
+    $("#menuHome").click(function(){
+        window.open("index.html","_self")
+    })
+
+    $("#standartproduct").click(function(){
+        window.open("orangeamarylls.html","_self")
+    })
+    
+    $("#accordionMob").click(function(){
+        window.open("accordions.html","_self")
+    })
+    
+
+    $("#progressMob").click(function(){
+        window.open("progressbar.html","_self")
+    })
+    
+
+    $("#tabsMob").click(function(){
+        window.open("tabs.html","_self")
+    })
+    
 
 
 
 
-
-
-
-
-    $(".search-icon i").click(function () {
+    $(".search-icon i").click(function (e) {
+        e.stopPropagation()
         $(".search-icon input").slideToggle()
+    })
+    $(window).click(function () {
+
+        $(".search-icon input").slideUp()
     })
 
 
@@ -166,6 +218,7 @@ $(document).ready(function () {
         cardCounter();
         totalPrice();
         cardProducts();
+        console.log(basket.length);
 
     })
 
@@ -219,6 +272,7 @@ $(document).ready(function () {
             cardCounter();
             cardProducts();
             totalPrice();
+            console.log(basket.length);
         });
     }
 

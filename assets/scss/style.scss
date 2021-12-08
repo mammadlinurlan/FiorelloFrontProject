@@ -61,6 +61,7 @@ body {
         transition: 0.2s;
         transition-timing-function: ease-in-out;
     }
+    z-index: 99000;
     position: fixed;
     right: 3%;
     bottom: 3%;
@@ -139,7 +140,7 @@ header {
                                 margin-bottom: 25px;
                                 
                                 ul {
-                                    padding: 10px 0px;
+                                    
                                     top: 40px;
                                     overflow: hidden;
                                     visibility: hidden;
@@ -148,7 +149,7 @@ header {
                                     background-color: white;
                                     position: absolute;
                                     right: 185px;
-                                    padding-left: 0%;
+                                    
                                     transition: 0.5s;
                                 }
                                 &:hover{
@@ -787,23 +788,7 @@ header {
             }
         }
     }
-    a:after {
-        display: block;
-        content: "";
-        border-bottom: solid 1px black;
-        transform: scaleX(0);
-        transition: transform 250ms ease-in-out;
-    }
-
-    a:hover:after {
-        transform: scaleX(1);
-    }
-    a:after {
-        transform-origin: 100% 50%;
-    }
-    a:after {
-        transform-origin: 0% 50%;
-    }
+  
 }
 
 main {
@@ -1781,9 +1766,12 @@ main {
                         margin-left: 15px;
                     }
                     .icon {
-                        transition: 0.2s;
-                        transition-timing-function: ease-out;
+                       
                         font-size: 14px;
+                        i{
+                            transition: 0.2s;
+                            transition-timing-function: ease-out;
+                        }
                     }
                 }
 
@@ -1829,7 +1817,8 @@ main {
             .titles {
                 .title {
                     button {
-                        border: 1px solid grey;
+                        border: 1px solid rgb(194, 194, 194);
+                        border-bottom: none;
                         width: 100%;
                         height: 100%;
                         padding: 14px 0;
@@ -1838,6 +1827,7 @@ main {
                         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
                             "Open Sans", "Helvetica Neue", sans-serif;
                         font-weight: lighter;
+                        
                     }
                 }
             }
@@ -1846,6 +1836,7 @@ main {
                     display: none;
                     width: 100%;
                     border: 1px solid rgb(194, 194, 194);
+                    
                     // padding: 15px 40px;
                     padding: 10px 40px;
                     height: 240px;
@@ -1890,6 +1881,8 @@ main {
                 .titles {
                     .title {
                         button {
+                            border-right: none;
+
                             transition: 0.3s;
                             transition-timing-function: ease-in-out;
                             &:hover {
@@ -2465,6 +2458,23 @@ main {
 }
 
 footer {
+    // a:after {
+    //     display: block;
+    //     content: "";
+    //     border-bottom: solid 1px black;
+    //     transform: scaleX(0);
+    //     transition: transform 250ms ease-in-out;
+    // }
+
+    // a:hover:after {
+    //     transform: scaleX(1);
+    // }
+    // a:after {
+    //     transform-origin: 100% 50%;
+    // }
+    // a:after {
+    //     transform-origin: 0% 50%;
+    // }
     background-color: #fefaf3;
     .top {
         padding: 3% 0;
@@ -2555,10 +2565,42 @@ footer {
             }
         }
     }
+    
+}
+
+
+a:after {
+    display: block;
+    content: "";
+    border-bottom: solid 1px black;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+a:hover:after {
+    transform: scaleX(1);
+}
+a:after {
+    transform-origin: 100% 50%;
+}
+a:after {
+    transform-origin: 0% 50%;
+}
+
+.row > * {
+    padding-right: 0;
+    padding-left: 0;
+}
+.row {
+    --bs-gutter-x: 0;
+}
+
+@media screen and(max-width:767px) {
+
     a:after {
         display: block;
         content: "";
-        border-bottom: solid 1px black;
+        border-bottom: solid 1px transparent;
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
     }
@@ -2572,17 +2614,8 @@ footer {
     a:after {
         transform-origin: 0% 50%;
     }
-}
 
-.row > * {
-    padding-right: 0;
-    padding-left: 0;
-}
-.row {
-    --bs-gutter-x: 0;
-}
 
-@media screen and(max-width:767px) {
     main {
         #Tabs {
             .mid-tabs {
@@ -2893,7 +2926,7 @@ footer {
             .flowersInfo {
                 width: 380px;
                 position: absolute;
-                top: 25%;
+                top: 10%;
                 transform: scale(0.6);
                 left: -10%;
             }
@@ -2904,7 +2937,7 @@ footer {
         #introduce {
             .images {
                 img {
-                    height: 420px;
+                    height: 240px;
                 }
             }
         }
@@ -2940,6 +2973,25 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+
+    a:after {
+        display: block;
+        content: "";
+        border-bottom: solid 1px transparent;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+    }
+
+    a:hover:after {
+        transform: scaleX(1);
+    }
+    a:after {
+        transform-origin: 100% 50%;
+    }
+    a:after {
+        transform-origin: 0% 50%;
+    }
+
     header {
         .mainNav {
             padding: 35px 35px;

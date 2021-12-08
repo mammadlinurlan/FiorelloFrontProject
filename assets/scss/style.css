@@ -56,6 +56,7 @@ html {
 }
 
 .goHeadButton {
+  z-index: 99000;
   position: fixed;
   right: 3%;
   bottom: 3%;
@@ -150,7 +151,6 @@ header nav .nav-right .nav-links ul li .elements li {
 }
 
 header nav .nav-right .nav-links ul li .elements li ul {
-  padding: 10px 0px;
   top: 40px;
   overflow: hidden;
   visibility: hidden;
@@ -159,7 +159,6 @@ header nav .nav-right .nav-links ul li .elements li ul {
   background-color: white;
   position: absolute;
   right: 185px;
-  padding-left: 0%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -692,33 +691,6 @@ header .menu .menu-nav-links ul li a i {
 
 header .menu .menu-nav-links ul li a span {
   font-size: 10px;
-}
-
-header a:after {
-  display: block;
-  content: "";
-  border-bottom: solid 1px black;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-}
-
-header a:hover:after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-header a:after {
-  -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
-}
-
-header a:after {
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
 }
 
 main #introduce {
@@ -1905,11 +1877,17 @@ main #accordions .topLeftAccordion .accordion .title-icon .icon,
 main #accordions .topRightAccordion .accordion .title-icon .icon,
 main #accordions .bottomLeftAccordion .accordion .title-icon .icon,
 main #accordions .bottomRightAccordion .accordion .title-icon .icon {
+  font-size: 14px;
+}
+
+main #accordions .topLeftAccordion .accordion .title-icon .icon i,
+main #accordions .topRightAccordion .accordion .title-icon .icon i,
+main #accordions .bottomLeftAccordion .accordion .title-icon .icon i,
+main #accordions .bottomRightAccordion .accordion .title-icon .icon i {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  font-size: 14px;
 }
 
 main #accordions .topLeftAccordion .accordion .article,
@@ -1952,7 +1930,8 @@ main #Tabs .topLeftTab .titles .title button,
 main #Tabs .topRightTab .titles .title button,
 main #Tabs .midTab .titles .title button,
 main #Tabs .botTab .titles .title button {
-  border: 1px solid grey;
+  border: 1px solid #c2c2c2;
+  border-bottom: none;
   width: 100%;
   height: 100%;
   padding: 14px 0;
@@ -2002,6 +1981,7 @@ main #Tabs .mid-tabs .midTab .articles .article {
 }
 
 main #Tabs .bottom-tabs .botTab .titles .title button {
+  border-right: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-transition-timing-function: ease-in-out;
@@ -2821,7 +2801,7 @@ footer .bottom .socialmedia a:hover {
   color: red;
 }
 
-footer a:after {
+a:after {
   display: block;
   content: "";
   border-bottom: solid 1px black;
@@ -2833,17 +2813,17 @@ footer a:after {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
-footer a:hover:after {
+a:hover:after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-footer a:after {
+a:after {
   -webkit-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
 }
 
-footer a:after {
+a:after {
   -webkit-transform-origin: 0% 50%;
           transform-origin: 0% 50%;
 }
@@ -2858,6 +2838,29 @@ footer a:after {
 }
 
 @media screen and (max-width: 767px) {
+  a:after {
+    display: block;
+    content: "";
+    border-bottom: solid 1px transparent;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  }
+  a:hover:after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  a:after {
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+  }
+  a:after {
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
   main #Tabs .mid-tabs .midTab .articles .article {
     height: 100%;
   }
@@ -2999,13 +3002,13 @@ footer a:after {
   main #introduce .flowersInfo {
     width: 380px;
     position: absolute;
-    top: 25%;
+    top: 10%;
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
     left: -10%;
   }
   main #introduce .images img {
-    height: 420px;
+    height: 240px;
   }
   .container {
     width: 85% !important;
@@ -3028,6 +3031,29 @@ footer a:after {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+  a:after {
+    display: block;
+    content: "";
+    border-bottom: solid 1px transparent;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  }
+  a:hover:after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  a:after {
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+  }
+  a:after {
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
   header .mainNav {
     padding: 35px 35px;
   }

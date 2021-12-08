@@ -224,6 +224,7 @@ header nav .nav-right .nav-links ul li .homeUlDiv, header nav .nav-right .nav-li
 }
 
 header nav .nav-right .nav-links ul li .homeUlDiv ul, header nav .nav-right .nav-links ul li .pagesUlDiv ul, header nav .nav-right .nav-links ul li .portfolioUlDiv ul, header nav .nav-right .nav-links ul li .blogUlDiv ul, header nav .nav-right .nav-links ul li .elementsUlDiv ul {
+  overflow: hidden;
   top: 95px;
   display: block;
 }

@@ -7,34 +7,34 @@ $(document).ready(function () {
         window.open("index.html", "_self")
     })
 
-    $(".home li:nth-child(1) a").click(function(e){
+    $(".home li:nth-child(1) a").click(function (e) {
         e.preventDefault();
-        window.open("index.html","_self")
+        window.open("index.html", "_self")
     })
 
-    $(".producttypes li:nth-child(2) a").click(function(e){
+    $(".producttypes li:nth-child(2) a").click(function (e) {
         e.preventDefault();
-        window.open("orangeamarylls.html","_self")
+        window.open("orangeamarylls.html", "_self")
     })
 
-    $(".classic li:nth-child(2) a").click(function(e){
+    $(".classic li:nth-child(2) a").click(function (e) {
         e.preventDefault();
-        window.open("tabs.html","_self")
+        window.open("tabs.html", "_self")
     })
 
-    $(".classic li:nth-child(1) a").click(function(e){
+    $(".classic li:nth-child(1) a").click(function (e) {
         e.preventDefault();
-        window.open("accordions.html","_self")
+        window.open("accordions.html", "_self")
     })
 
-    
 
-    $(".infographic li:nth-child(5) a").click(function(e){
+
+    $(".infographic li:nth-child(5) a").click(function (e) {
         e.preventDefault();
-        window.open("progressbar.html","_self")
+        window.open("progressbar.html", "_self")
     })
 
-   
+
 
 
 
@@ -59,37 +59,48 @@ $(document).ready(function () {
 
 
     })
-    
+
 
     // console.log(basketlen.length);
-    
 
-    $(".search-shopping .shopping").hover(function(){
+
+    $(".search-shopping .shopping").hover(function () {
+
         let basketlen = JSON.parse(localStorage.getItem("basket"))
-        if(basketlen.length == 0){
-            alert("basket is empty")
+        if (basketlen.length == 0) {
+            // alert("basket is empty")
+            $(".basketAlert").css("opacity","100%")
         }
-        else{
-            $(".search-shopping .shopping").hover(function () {
-        
-                $(".search-shopping .basketList").css("height", "220px")
-            }, function () {
-                $(".search-shopping .basketList").css("height", "0%")
-            })
-        
-            $(".search-shopping .basketList").hover(function () {
-                $(this).css("height", "220px")
-            }, function () {
-                $(this).css("height", "0%")
-            })
-        
+        else {
+    
+    
+            $(".search-shopping .basketList").css("height", "220px")
+    
+    
+    
+    
+    
         }
-       
 
+    },
+
+
+        function () {
+            $(".basketAlert").css("opacity","0%")
+
+            $(".search-shopping .basketList").css("height", "0%")
+
+
+        }
+    )
+
+    $(".search-shopping .basketList").hover(function () {
+        $(this).css("height", "220px")
+    }, function () {
+        $(this).css("height", "0%")
     })
 
 
-    
    
 
     // $(".search-shopping .shopping").hover(function(){
@@ -115,12 +126,12 @@ $(document).ready(function () {
     })
 
 
-    $(".classic li:nth-child(1) a").click(function(){
+    $(".classic li:nth-child(1) a").click(function () {
         console.log("aue");
     })
 
     $(".menu .menu-nav-links li.1 a").click(function (e) {
-        
+
 
         e.preventDefault();
         let sublink = $(this).parent().children(".sublinks")
@@ -138,35 +149,35 @@ $(document).ready(function () {
         e.preventDefault()
         let subsublink = $(this).children(".sub-subLinks")
         $(subsublink).slideToggle()
-      
-        
+
+
 
         // $(".menu .menu-nav-links li.1").children(".sublinks").slideUp()
 
     })
 
-    $("#menuHome").click(function(){
-        window.open("index.html","_self")
+    $("#menuHome").click(function () {
+        window.open("index.html", "_self")
     })
 
-    $("#standartproduct").click(function(){
-        window.open("orangeamarylls.html","_self")
+    $("#standartproduct").click(function () {
+        window.open("orangeamarylls.html", "_self")
     })
-    
-    $("#accordionMob").click(function(){
-        window.open("accordions.html","_self")
-    })
-    
 
-    $("#progressMob").click(function(){
-        window.open("progressbar.html","_self")
+    $("#accordionMob").click(function () {
+        window.open("accordions.html", "_self")
     })
-    
 
-    $("#tabsMob").click(function(){
-        window.open("tabs.html","_self")
+
+    $("#progressMob").click(function () {
+        window.open("progressbar.html", "_self")
     })
-    
+
+
+    $("#tabsMob").click(function () {
+        window.open("tabs.html", "_self")
+    })
+
 
 
 

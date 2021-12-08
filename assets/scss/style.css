@@ -115,34 +115,34 @@ header nav .nav-right .nav-links ul li a span {
   font-size: 12px;
 }
 
-header nav .nav-right .nav-links ul li:hover .home {
-  visibility: visible;
-  height: 50%;
-}
-
-header nav .nav-right .nav-links ul li:hover .pages {
-  visibility: visible;
-  height: 25%;
-}
-
-header nav .nav-right .nav-links ul li:hover .portfolio {
-  visibility: visible;
-  height: 40%;
-}
-
-header nav .nav-right .nav-links ul li:hover .blog {
-  visibility: visible;
-  height: 30%;
-}
-
-header nav .nav-right .nav-links ul li:hover .elements {
-  visibility: visible;
-  height: 30%;
-}
-
 header nav .nav-right .nav-links ul li:hover .shopcards {
   visibility: visible;
   height: 75vh;
+}
+
+header nav .nav-right .nav-links ul li:hover .homeUlDiv {
+  visibility: visible;
+  height: 50vh;
+}
+
+header nav .nav-right .nav-links ul li:hover .blogUlDiv {
+  visibility: visible;
+  height: 24vh;
+}
+
+header nav .nav-right .nav-links ul li:hover .pagesUlDiv {
+  visibility: visible;
+  height: 25vh;
+}
+
+header nav .nav-right .nav-links ul li:hover .elementsUlDiv {
+  visibility: visible;
+  height: 30vh;
+}
+
+header nav .nav-right .nav-links ul li:hover .portfolioUlDiv {
+  visibility: visible;
+  height: 35vh;
 }
 
 header nav .nav-right .nav-links ul li .elements li {
@@ -158,112 +158,21 @@ header nav .nav-right .nav-links ul li .elements li ul {
   display: block;
   background-color: white;
   position: absolute;
-  right: 230px;
+  right: 185px;
   padding-left: 0%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 header nav .nav-right .nav-links ul li .elements li:hover ul {
-  height: 100% !important;
+  height: -webkit-max-content !important;
+  height: -moz-max-content !important;
+  height: max-content !important;
   visibility: visible;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-header nav .nav-right .nav-links ul li .elements .typographyli:hover .typography {
-  opacity: 100%;
-}
-
-header nav .nav-right .nav-links ul li .elements .classicli:hover .classic {
-  opacity: 100%;
-}
-
-header nav .nav-right .nav-links ul li .elements .infographicli:hover .infographic {
-  opacity: 100%;
-}
-
-header nav .nav-right .nav-links ul li .elements .interactiveli:hover .interactive {
-  opacity: 100%;
 }
 
 header nav .nav-right .nav-links ul li .elements i {
   margin-right: 40px;
-}
-
-header nav .nav-right .nav-links ul li .portfolio #prtflsingle:hover .portfoliosingle {
-  visibility: visible;
-  height: 80% !important;
-}
-
-header nav .nav-right .nav-links ul li .portfolio #prtflayout:hover .portfoliolayouts {
-  visibility: visible;
-  height: 80% !important;
-}
-
-header nav .nav-right .nav-links ul li .home,
-header nav .nav-right .nav-links ul li .pages,
-header nav .nav-right .nav-links ul li .portfolio,
-header nav .nav-right .nav-links ul li .blog,
-header nav .nav-right .nav-links ul li .elements {
-  position: relative;
-  z-index: 50;
-  width: 200px;
-  background-color: white;
-  position: absolute;
-  padding-top: 40px;
-  padding-left: 0px;
-  top: 95px;
-  display: block;
-  visibility: hidden;
-  height: 0%;
-}
-
-header nav .nav-right .nav-links ul li .home li,
-header nav .nav-right .nav-links ul li .pages li,
-header nav .nav-right .nav-links ul li .portfolio li,
-header nav .nav-right .nav-links ul li .blog li,
-header nav .nav-right .nav-links ul li .elements li {
-  margin-bottom: 25px;
-}
-
-header nav .nav-right .nav-links ul li .home .portfoliolayouts,
-header nav .nav-right .nav-links ul li .pages .portfoliolayouts,
-header nav .nav-right .nav-links ul li .portfolio .portfoliolayouts,
-header nav .nav-right .nav-links ul li .blog .portfoliolayouts,
-header nav .nav-right .nav-links ul li .elements .portfoliolayouts {
-  padding: 6px 0;
-  overflow: hidden;
-  display: block;
-  background-color: white;
-  position: absolute;
-  top: 190px;
-  left: 255px;
-  padding-left: 0;
-  visibility: hidden;
-  height: 0% !important;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-header nav .nav-right .nav-links ul li .home .portfoliosingle,
-header nav .nav-right .nav-links ul li .pages .portfoliosingle,
-header nav .nav-right .nav-links ul li .portfolio .portfoliosingle,
-header nav .nav-right .nav-links ul li .blog .portfoliosingle,
-header nav .nav-right .nav-links ul li .elements .portfoliosingle {
-  padding: 6px 0;
-  overflow: hidden;
-  height: 0% !important;
-  display: block;
-  visibility: hidden;
-  height: 0%;
-  background-color: white;
-  position: absolute;
-  top: 200px;
-  left: 255px;
-  padding-left: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 header nav .nav-right .nav-links ul li .home {
@@ -276,7 +185,7 @@ header nav .nav-right .nav-links ul li .blog {
 
 header nav .nav-right .nav-links ul li .blog .post:hover .bloginlinks {
   visibility: visible;
-  height: 250px !important;
+  height: 40vh !important;
 }
 
 header nav .nav-right .nav-links ul li .blog .post .bloginlinks {
@@ -285,13 +194,84 @@ header nav .nav-right .nav-links ul li .blog .post .bloginlinks {
   transition: 0.2s;
   display: block;
   position: absolute;
-  left: 210px;
+  left: 163px;
   top: 104px;
   background-color: white;
   padding-left: 0%;
   padding-right: 0%;
   visibility: hidden;
   height: 0% !important;
+  padding: 30px !important;
+}
+
+header nav .nav-right .nav-links ul li .homeUlDiv, header nav .nav-right .nav-links ul li .pagesUlDiv, header nav .nav-right .nav-links ul li .portfolioUlDiv, header nav .nav-right .nav-links ul li .blogUlDiv, header nav .nav-right .nav-links ul li .elementsUlDiv {
+  position: relative;
+  z-index: 50;
+  height: 0%;
+  visibility: hidden;
+  width: 200px;
+  background-color: white;
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: white;
+  position: absolute;
+  padding-top: 50px;
+}
+
+header nav .nav-right .nav-links ul li .homeUlDiv ul, header nav .nav-right .nav-links ul li .pagesUlDiv ul, header nav .nav-right .nav-links ul li .portfolioUlDiv ul, header nav .nav-right .nav-links ul li .blogUlDiv ul, header nav .nav-right .nav-links ul li .elementsUlDiv ul {
+  top: 95px;
+  display: block;
+}
+
+header nav .nav-right .nav-links ul li .homeUlDiv ul li, header nav .nav-right .nav-links ul li .pagesUlDiv ul li, header nav .nav-right .nav-links ul li .portfolioUlDiv ul li, header nav .nav-right .nav-links ul li .blogUlDiv ul li, header nav .nav-right .nav-links ul li .elementsUlDiv ul li {
+  margin-bottom: 25px;
+  margin-left: 0% !important;
+}
+
+header nav .nav-right .nav-links ul li .homeUlDiv .portfoliolayouts, header nav .nav-right .nav-links ul li .pagesUlDiv .portfoliolayouts, header nav .nav-right .nav-links ul li .portfolioUlDiv .portfoliolayouts, header nav .nav-right .nav-links ul li .blogUlDiv .portfoliolayouts, header nav .nav-right .nav-links ul li .elementsUlDiv .portfoliolayouts {
+  padding: 10px 30px !important;
+  overflow: hidden;
+  display: block;
+  background-color: white;
+  position: absolute;
+  top: 190px;
+  left: 235px;
+  padding-left: 0;
+  visibility: hidden;
+  height: 0% !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav .nav-right .nav-links ul li .homeUlDiv .portfoliosingle, header nav .nav-right .nav-links ul li .pagesUlDiv .portfoliosingle, header nav .nav-right .nav-links ul li .portfolioUlDiv .portfoliosingle, header nav .nav-right .nav-links ul li .blogUlDiv .portfoliosingle, header nav .nav-right .nav-links ul li .elementsUlDiv .portfoliosingle {
+  padding: 10px 30px !important;
+  overflow: hidden;
+  height: 0% !important;
+  display: block;
+  visibility: hidden;
+  background-color: white;
+  position: absolute;
+  top: 200px;
+  left: 235px;
+  padding-left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav .nav-right .nav-links ul li .homeUlDiv #prtflsingle:hover .portfoliosingle, header nav .nav-right .nav-links ul li .pagesUlDiv #prtflsingle:hover .portfoliosingle, header nav .nav-right .nav-links ul li .portfolioUlDiv #prtflsingle:hover .portfoliosingle, header nav .nav-right .nav-links ul li .blogUlDiv #prtflsingle:hover .portfoliosingle, header nav .nav-right .nav-links ul li .elementsUlDiv #prtflsingle:hover .portfoliosingle {
+  visibility: visible;
+  height: 30vh !important;
+}
+
+header nav .nav-right .nav-links ul li .homeUlDiv #prtflayout:hover .portfoliolayouts, header nav .nav-right .nav-links ul li .pagesUlDiv #prtflayout:hover .portfoliolayouts, header nav .nav-right .nav-links ul li .portfolioUlDiv #prtflayout:hover .portfoliolayouts, header nav .nav-right .nav-links ul li .blogUlDiv #prtflayout:hover .portfoliolayouts, header nav .nav-right .nav-links ul li .elementsUlDiv #prtflayout:hover .portfoliolayouts {
+  visibility: visible;
+  height: 30vh !important;
 }
 
 header nav .nav-right .nav-links ul li .shopcards {
@@ -372,6 +352,7 @@ header .search-shopping .basketList {
   overflow: hidden;
   padding: 0px 15px;
   border: 1px solid #f7f1e3;
+  border-top: 0px !important;
   background-color: white;
   position: absolute;
   top: 100%;

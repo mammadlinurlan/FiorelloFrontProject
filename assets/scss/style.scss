@@ -106,31 +106,32 @@ header {
                             }
                         }
                         &:hover {
-                            .home {
-                                visibility: visible;
-                                height: 50%;
-                            }
-                            .pages {
-                                visibility: visible;
-                                height: 25%;
-                            }
-                            .portfolio {
-                                visibility: visible;
-                                height: 40%;
-                            }
-                            .blog {
-                                visibility: visible;
-                                height: 30%;
-                            }
-                            .elements {
-                                visibility: visible;
-                                height: 30%;
-                            }
+                            
                             .shopcards {
                                 visibility: visible;
                                 height: 75vh;
                             }
-                            
+                            .homeUlDiv{
+                                visibility: visible;
+                                height: 50vh;
+                            }
+                            .blogUlDiv{
+                                visibility: visible;
+                                height: 24vh;
+                            }
+                            .pagesUlDiv{
+                                visibility: visible;
+                                height: 25vh;
+                            }
+                            .elementsUlDiv{
+                                visibility: visible;
+                                height: 30vh;
+                            }
+                            .portfolioUlDiv{
+                                visibility: visible;
+                                height: 35vh;
+                            }
+
                         }
 
                         .elements {
@@ -146,16 +147,16 @@ header {
                                     display: block;
                                     background-color: white;
                                     position: absolute;
-                                    right: 230px;
+                                    right: 185px;
                                     padding-left: 0%;
                                     transition: 0.5s;
                                 }
                                 &:hover{
                                     ul{
                                         // display: block;
-                                        height: 100% !important;
+                                        height: max-content !important;
                                         visibility: visible;
-                                        transition: 0.5s;
+                                        
                                     }
                                 }
                                 // .classic {
@@ -181,26 +182,26 @@ header {
                                 //     display: none;
                                 // }
                             }
-                            .typographyli:hover {
-                                .typography {
-                                    opacity: 100%;
-                                }
-                            }
-                            .classicli:hover {
-                                .classic {
-                                    opacity: 100%;
-                                }
-                            }
-                            .infographicli:hover {
-                                .infographic {
-                                    opacity: 100%;
-                                }
-                            }
-                            .interactiveli:hover {
-                                .interactive {
-                                    opacity: 100%;
-                                }
-                            }
+                            // .typographyli:hover {
+                            //     .typography {
+                            //         opacity: 100%;
+                            //     }
+                            // }
+                            // .classicli:hover {
+                            //     .classic {
+                            //         opacity: 100%;
+                            //     }
+                            // }
+                            // .infographicli:hover {
+                            //     .infographic {
+                            //         opacity: 100%;
+                            //     }
+                            // }
+                            // .interactiveli:hover {
+                            //     .interactive {
+                            //         opacity: 100%;
+                            //     }
+                            // }
                             
                         }
 
@@ -210,78 +211,35 @@ header {
                             }
                         }
 
-                        .portfolio {
-
-                            #prtflsingle:hover {
-                                .portfoliosingle {
-                                    visibility: visible;
-                                    height: 80% !important;
-                                }
-                            }
-                            #prtflayout:hover {
-                                .portfoliolayouts {
-                                    visibility: visible;
-                                    height: 80% !important;
-                                    
-                                }
-                            }
-                        }
+                       
                         margin-left: 30px;
-                        .home,
-                        .pages,
-                        .portfolio,
-                        .blog,
-                        .elements {
-                            position: relative;
-                            z-index: 50;
+                        
+                        // .pages,
+                        // .portfolio,
+                        // .blog,
+                        // .elements {
+                            // position: relative;
+                            // z-index: 50;
                             
-                            width: 200px;
-                            background-color: white;
-                            position: absolute;
-                            padding-top: 40px;
-                            padding-left: 0px;
-                            li {
-                                margin-bottom: 25px;
-                            }
-                            top: 95px;
+                            // width: 200px;
+                            // background-color: white;
+                            // position: absolute;
+                            // padding-top: 40px;
+                            // padding-left: 0px;
+                            // li {
+                            //     margin-bottom: 25px;
+                            // }
+                            // top: 95px;
 
-                            display: block;
-                            visibility: hidden;
-                            height: 0%;
+                            // display: block;
+                            // visibility: hidden;
+                            // height: 0% ;
                             // overflow: hidden;
 
                             
 
-                            .portfoliolayouts {
-                                padding: 6px 0;
-
-                                overflow: hidden;
-                                display: block;
-                                background-color: white;
-                                position: absolute;
-                                top: 190px;
-                                left: 255px;
-                                padding-left: 0;
-                                visibility: hidden;
-                                height: 0% !important;
-                                transition: 0.3s;
-                            }
-                            .portfoliosingle {
-                                padding: 6px 0;
-                                overflow: hidden;
-                                height: 0% !important;
-
-                                display: block;
-                                visibility: hidden;
-                                height: 0%;
-                                background-color: white;
-                                position: absolute;
-                                top: 200px;
-                                left: 255px;
-                                padding-left: 0;
-                                transition: 0.3s;
-                            }
-                        }
+                           
+                        // }
                         .home {
                             width: 220px;
                         }
@@ -291,7 +249,7 @@ header {
                                 &:hover {
                                     .bloginlinks {
                                         visibility: visible;
-                                        height: 250px !important;
+                                        height: 40vh !important;
                                     }
                                 }
                                 .bloginlinks {
@@ -299,15 +257,128 @@ header {
                                     transition: 0.2s;
                                     display: block;
                                     position: absolute;
-                                    left: 210px;
+                                    left: 163px;
                                     top: 104px;
                                     background-color: white;
                                     padding-left: 0%;
                                     padding-right: 0%;
                                     visibility: hidden;
                                     height: 0% !important;
+                                    padding: 30px !important;
                                 }
                             }
+                        }
+
+                        .homeUlDiv,.pagesUlDiv,.portfolioUlDiv,.blogUlDiv,.elementsUlDiv{
+                            position: relative;
+                            z-index: 50;
+                            height: 0%;
+                            visibility: hidden;
+                            // overflow: hidden;
+                            width: 200px;
+                            background-color: white;
+                            position: absolute;
+                            // padding-top: 40px;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            width: max-content;
+                            transition: 0.3s;
+
+                            background-color: white;
+                            position: absolute;
+                            padding-top: 50px;
+                            // padding-bottom: 25px;
+
+                            ul{
+                                li {
+                                    margin-bottom: 25px;
+                                    // padding-right: 20px;
+                                    margin-left: 0% !important;
+                                }
+                                top: 95px;
+    
+                                display: block;
+                                // visibility: hidden;
+                            }
+                            // .portfolioLayoutDiv{
+                            //     height: 0%;
+                            //     visibility: hidden;
+                            //     padding: 6px 0;
+
+                            //         overflow: hidden;
+                            //         display: block;
+                            //         background-color: white;
+                            //         position: absolute;
+                            //         top: 190px;
+                            //         left: 255px;
+                            //         padding-left: 0;
+                            //         // visibility: hidden;
+                            //         // height: 0% !important;
+                            //         transition: 0.3s;
+                            // }
+                            // .portfolioLayoutDiv{
+                            //     height: 0%;
+                            //     visibility: hidden;
+                            //     padding: 6px 0;
+
+                            //         overflow: hidden;
+                            //         display: block;
+                            //         background-color: white;
+                            //         position: absolute;
+                            //         top: 190px;
+                            //         left: 255px;
+                            //         padding-left: 0;
+                            //         // visibility: hidden;
+                            //         // height: 0% !important;
+                            //         transition: 0.3s;
+                            // }
+                            .portfoliolayouts {
+                                
+                               
+                                padding: 10px 30px !important;
+                                overflow: hidden;
+                                display: block;
+                                background-color: white;
+                                position: absolute;
+                                top: 190px;
+                                left: 235px;
+                                padding-left: 0;
+                                visibility: hidden;
+                                height: 0% !important;
+                                transition: 0.3s;
+                            }
+                            .portfoliosingle {
+                                padding: 10px 30px !important;
+
+                                overflow: hidden;
+                                height: 0% !important;
+
+                                display: block;
+                                visibility: hidden;
+                                // height: 0%;
+                                background-color: white;
+                                position: absolute;
+                                top: 200px;
+                                left: 235px;
+                                padding-left: 0;
+                                transition: 0.3s;
+                            }
+
+                            #prtflsingle:hover {
+                                .portfoliosingle {
+                                    visibility: visible;
+                                    height: 30vh !important;
+                                }
+                            }
+                            #prtflayout:hover {
+                                .portfoliolayouts {
+                                    visibility: visible;
+                                    height: 30vh !important;
+                                    
+                                }
+                            }
+                            
+                            
                         }
 
                         .shopcards {
@@ -315,6 +386,7 @@ header {
                             z-index: 50;
                             display: flex;
                             overflow: hidden;
+                            
                             ul {
                                 display: block;
                                 padding-left: 30px;
@@ -375,6 +447,7 @@ header {
             overflow: hidden;
             padding: 0px 15px;
             border: 1px solid #f7f1e3;
+            border-top: 0px !important;
             background-color: white;
             position: absolute;
             top: 100%;

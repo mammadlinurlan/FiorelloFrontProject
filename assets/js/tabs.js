@@ -58,13 +58,12 @@ $(document).ready(function () {
     $(".bottom-tabs .botTab .titles .title").click(function(){
         let dataid = $(this).attr("data-id")
         let btn = $(this).children().first()
-        let article = document.querySelector(`.botTabs .${dataid}`)
-        $(".bottom-tabs .botTab .titles .title button").not(btn).removeClass("activeTab")
-        $(btn).addClass("activeTab")
-        $(".bottom-tabs .botTab .articles .article").not(article).removeClass("activeArticle")
+        let article = document.querySelector(`.botTab .${dataid}`)
+        console.log(article);
+            $(".bottom-tabs .botTab .titles .title button").not(btn).removeClass("activeTab")
+            $(btn).addClass("activeTab")
+        $(".botTab .articles .article").not(article).removeClass("activeArticle")
         $(article).addClass("activeArticle")
-
-
     })
 
     

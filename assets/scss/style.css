@@ -128,27 +128,27 @@ header nav .nav-right .nav-links ul li:hover .shopcards {
 
 header nav .nav-right .nav-links ul li:hover .homeUlDiv {
   visibility: visible;
-  height: 50vh;
+  height: 400px;
 }
 
 header nav .nav-right .nav-links ul li:hover .blogUlDiv {
   visibility: visible;
-  height: 24vh;
+  height: 200px;
 }
 
 header nav .nav-right .nav-links ul li:hover .pagesUlDiv {
   visibility: visible;
-  height: 25vh;
+  height: 200px;
 }
 
 header nav .nav-right .nav-links ul li:hover .elementsUlDiv {
   visibility: visible;
-  height: 30vh;
+  height: 250px;
 }
 
 header nav .nav-right .nav-links ul li:hover .portfolioUlDiv {
   visibility: visible;
-  height: 35vh;
+  height: 300px;
 }
 
 header nav .nav-right .nav-links ul li .elements li {
@@ -271,12 +271,12 @@ header nav .nav-right .nav-links ul li .homeUlDiv .portfoliosingle, header nav .
 
 header nav .nav-right .nav-links ul li .homeUlDiv #prtflsingle:hover .portfoliosingle, header nav .nav-right .nav-links ul li .pagesUlDiv #prtflsingle:hover .portfoliosingle, header nav .nav-right .nav-links ul li .portfolioUlDiv #prtflsingle:hover .portfoliosingle, header nav .nav-right .nav-links ul li .blogUlDiv #prtflsingle:hover .portfoliosingle, header nav .nav-right .nav-links ul li .elementsUlDiv #prtflsingle:hover .portfoliosingle {
   visibility: visible;
-  height: 30vh !important;
+  height: 250px !important;
 }
 
 header nav .nav-right .nav-links ul li .homeUlDiv #prtflayout:hover .portfoliolayouts, header nav .nav-right .nav-links ul li .pagesUlDiv #prtflayout:hover .portfoliolayouts, header nav .nav-right .nav-links ul li .portfolioUlDiv #prtflayout:hover .portfoliolayouts, header nav .nav-right .nav-links ul li .blogUlDiv #prtflayout:hover .portfoliolayouts, header nav .nav-right .nav-links ul li .elementsUlDiv #prtflayout:hover .portfoliolayouts {
   visibility: visible;
-  height: 30vh !important;
+  height: 250px !important;
 }
 
 header nav .nav-right .nav-links ul li .shopcards {

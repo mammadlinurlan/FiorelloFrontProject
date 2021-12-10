@@ -2545,6 +2545,22 @@ a:after {
 
 @media screen and(max-width:767px) {
 
+
+    main{
+        #subscribe{
+           .parallax-window{
+            .subs{
+                input{
+                    width: 70%;
+                }
+                button{
+                    right: 15%;
+                }
+            }
+           }
+        }
+    }
+
     a:after {
         display: block;
         content: "";
